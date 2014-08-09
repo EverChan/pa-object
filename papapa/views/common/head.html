@@ -1,0 +1,55 @@
+{% macro activePage page type %}
+    {% set activeClass = "" %}
+    {% if page == type %}
+        {% set activeClass = "active" %}
+    {% endif %}
+    <li class="{{ activeClass }}">
+{% endmacro %}
+<link rel="stylesheet" href="/static/css/header.css"/>
+<script>
+    var USER_ID = "{{ passport.uid }}";
+    var CSRF = "{{ csrf }}";
+</script>
+<header id="header" class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a class="navbar-brand" href="/">Safy<span class="ver">3.2</span></a>-->
+            </div>
+
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            	<ul class="nav navbar-nav">
+            		{{ activePage(page,"index") }}<a href="/">首页</a></li>
+                	{{ activePage(page,"tasklist") }}<a href="/tasklist">任务列表</a></li>
+                	{{ activePage(page,"result") }}<a href="/result">测试结果</a></li>
+                    {{ activePage(page,"caselist") }}<a href='/caselist'>测试用例</a></li>
+                	{{ activePage(page,"docs") }}<a href='http://gitlab.alibaba-inc.com/x/maoxu/blob/master/README.md' target="_blank">说明文档</a></li>
+                	{{ activePage(page,"help") }}<a href='/help'>快速上手</a></li>
+                    {{ activePage(page,"tmwindow") }}<a href='/tmwindow'>天猫前端之窗</a></li>
+                    <li><a href="http://work.tmall.net/projects/maoxu/issues" target="_blank">建议&bug</a></li>
+                </ul>
+
+                <div class="btn-group">
+                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user glyphicon-black"></i> {{ passport.user }} <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <!--<li><a href="/reg?user={{ passport.user }}"><i class="glyphicon glyphicon-edit"></i> 编辑</a></li>-->
+                        <li><a href="/loginout"><i class="glyphicon glyphicon-remove-sign"></i> 退出</a></li>
+                    </ul>
+                </div>
+
+                {% if page == "------list"%}
+                <div class="form-inline case-search">
+                    <input class="form-control" id="search-text" autocomplete="off" type="text">
+                    <button class="btn btn-default" id="search-btn" type="button">搜索</button>
+                </div>
+                {% endif %}
+
+            </nav>
+        </div>
+        <hr class="header-footer"/>
+</header>
