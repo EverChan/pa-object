@@ -1,8 +1,3 @@
-/*!
- * maoxu-web - config/index.js
- * Copyright(c) 2014 Taobao.com
- * Author: busi.hyy <busi.hyy@alibaba-inc.com>
- */
 
 'use strict';
 
