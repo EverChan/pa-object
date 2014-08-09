@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block title %}API调试{% endblock %}
+{% block content %}
+<div class="layout">
+    <style>
+        dt {
+            padding-top: 20px;
+        }
+
+        dd p {
+            margin-bottom: 10px;
+            line-height: 1.8em;
+        }
+
+        dd label {
+            vertical-align: top;
+        }
+        pre{
+            word-wrap:break-word;
+            line-height: 1.6em;
+            font-size: 14px;
+        }
+    </style>
+    <form id="J_form">
+        <dl>
+            <dt>
+                API调试
+            </dt>
+            <dd>
+                <p>
+                    <label>
+                        请求地址： <input id="J_apiUrl" style="width: 260px;" value="api/users/"/>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        请求类型：
+                        <select id="J_ajaxType">
+                            <option value="get">get</option>
+                            <option value="post">post</option>
+                            <option value="put">put</option>
+                            <option value="delete">delete</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        请求参数：
+                        <textarea style="width:260px;height:160px;" id="J_param"></textarea>
+                    </label>
+                </p>
+
+                <p>
+                    <button type="submit" id="J_ajaxRequestButton">请求数据</button>
+                </p>
+            </dd>
+            <dd>
+                <pre id="J_responesData">
+
+                </pre>
+            </dd>
+        </dl>
+    </form>
+</div>
+<script>
+    KISSY.use('dom,event,ajax,uri,json', function (S, DOM, Event, IO, Uri,JSON) {
+        var urlIpt = DOM.get("#J_apiUrl"),
+                type = DOM.get("#J_ajaxType"),
+                param = DOM.get("#J_param"),
+                btn = DOM.get("#J_ajaxRequestButton"),
+                showArea = DOM.get("#J_responesData");
+        Event.on("#J_form", 'submit', function (ev) {
+            ev.halt();
+            var uri = new Uri(urlIpt.value),
+                data = {};
+            var query=new Uri.Query(param.value);
+            if(type.value=='get'){
+                uri.setQuery(query);
+            }else{
+                data=query.get();
+            }
+            debugger;
+
+            var url = uri.toString();
+            console.log(url);
+
+            var ajax = new IO({
+                type: type.value,
+                url: url,
+                data: data,
+                success: function (d) {
+                    DOM.html(showArea, JSON.stringify(d));
+                }
+            });
+
+        });
+
+    });
+</script>
+{% endblock %}

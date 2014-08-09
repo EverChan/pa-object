@@ -11,7 +11,8 @@ var csrf = require('koa-middlewares').csrf;
 
 module.exports = function (app) {
   csrf(app);
-  if (process.env.NODE_ENV === 'test') {
+//  if (process.env.NODE_ENV === 'test') {
+  if (true) {
     return noop;
   }
   return compose([csrf.middleware, setCsrf]);
@@ -19,6 +20,7 @@ module.exports = function (app) {
 
 function* setCsrf(next) {
   this.locals = this.locals || {};
+
   this.locals.csrf = this.csrf;
   yield* next;
 }

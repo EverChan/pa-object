@@ -13,6 +13,7 @@ var ResourceRouter = middlewares.ResourceRouter;
 
 
 var home = require('./controllers/home');
+var test = require('./controllers/test');
 
 
 //var taskController = require('./controllers/task');
@@ -37,6 +38,8 @@ var attentionApi=require('./controllers/api/attention');
 module.exports = function (app) {
     //首页
     app.get('/', home.index);
+    //api 调试页面
+    app.get('/test', test.index);
 
 
 //

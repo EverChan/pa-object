@@ -29,6 +29,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    font-size: 100%;
 }
 ol, ul {
     list-style: none;
@@ -48,4 +49,9 @@ table {
 
 .tc{
     text-align: center;
+}
+
+.layout{
+    margin: 0 auto;
+    width: 980px;
 }
