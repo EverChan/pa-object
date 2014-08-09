@@ -1,8 +1,4 @@
-/*!
- * maoxu-web - controllers/home.js
- * Copyright(c) 2014 Tmall.com
- * Author: busi.hyy <busi.hyy@alibaba-inc.com>
- */
+
 
 'use strict';
 
