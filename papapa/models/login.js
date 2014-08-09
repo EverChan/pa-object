@@ -1,0 +1,78 @@
+//登陆信息表models:login
+
+'use strict';
+
+/**
+ * Module dependencies.
+ */
+
+var multiline = require('multiline');
+var mysql = require('../common/mysql');
+var utils = require('../lib/utils');
+
+
+//查询最新的登陆信息列表
+var SELECT_LoginList = multiline(function () {;/*
+ SELECT * FROM login
+ group by uid order by loginid DESC limit 10
+ */});
+
+exports.getLoginList = function* (uid){
+    var _uid = parseInt(uid, 10);
+    if (!_uid) {
+        return null;
+    }
+    return yield mysql.query(SELECT_LoginList);
+};
+
+//查询最新一条的登陆信息
+var SELECT_LoginRecently = multiline(function () {;/*
+ SELECT * FROM login
+ WHERE uid=? order by id DESC limit 10
+ */});
+exports.getLoginRecently=function* (uid,bid){
+    var _uid = parseInt(uid, 10);
+    if (!_uid) {
+        return null;
+    }
+    return yield mysql.query(SELECT_LoginRecently, [_uid]);
+}
+
+//根据token查询
+var SELECT_LoginByToken=multiline(function () {;/*
+ SELECT * FROM login
+ WHERE uid=? and token=?
+ */});
+exports.getLoginByToken=function* (uid,token){
+    var _uid = parseInt(uid, 10);
+    if (!_uid) {
+        return null;
+    }
+    return yield mysql.query(SELECT_LoginByToken, [_uid,token]);
+}
+
+
+//生成一条登陆信息
+var CREATE_Login=multiline(function () {;/*
+ INSERT INTO login
+ SET ?
+ */});
+exports.createLogin=function* (uid,data){
+    var _uid = parseInt(uid, 10);
+    if (!_uid) {
+        return null;
+    }
+
+    var _data={
+        uid:_uid,
+        location:data.location,
+        token:data.token,
+        addtime:new Date()
+    };
+
+    return yield mysql.query(CREATE_Login, [_data]);
+}
+
+
+
+

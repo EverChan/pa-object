@@ -31,8 +31,7 @@ var test = require('./controllers/test');
 //
 //var pageController = require('./controllers/page');
 
-var usersApi=require('./controllers/api/users');
-var attentionApi=require('./controllers/api/attention');
+
 
 
 module.exports = function (app) {
@@ -40,7 +39,6 @@ module.exports = function (app) {
     app.get('/', home.index);
     //api 调试页面
     app.get('/test', test.index);
-
 
 //
 //  app.get('/tasklist', taskController.showTaskList);
@@ -64,7 +62,6 @@ module.exports = function (app) {
 
 
 
-
     // mount all API requests to API app
     app.use(mount('/api', API));
 };
@@ -77,36 +74,42 @@ var resourceOpts = {
 
 
 /**
- * GET /api/users
- * GET /api/users/:id
- * POST /api/users
- * PUT /api/users/:id
+ * api 列表
+ * @type {*[]}
  */
-var usersResourceRouter = new ResourceRouter('users', usersApi, resourceOpts);
-API.use(usersResourceRouter.middleware());
+var apiList=[
+    {
+        name:'users',
+        api:require('./controllers/api/users')
+    },
+    {
+        name:'attention',
+        api:require('./controllers/api/attention')
+    },
+    {
+        name:'message',
+        api:require('./controllers/api/message')
+    },
+    {
+        name:'relation',
+        api:require('./controllers/api/relation')
+    },
+    {
+        name:'login',
+        api:require('./controllers/api/login')
+    }
+];
+
+//注册api
+(function(list){
+    list.forEach(function(item){
+        var api=new ResourceRouter(item.name, item.api, resourceOpts);
+        API.use(api.middleware());
+    });
+})(apiList);
 
 
-/**
- * GET /api/attention
- * GET /api/attention/:id
- * POST /api/attention
- * PUT /api/attention/:id
- */
-var attentionResourceRouter = new ResourceRouter('attention', attentionApi, resourceOpts);
-API.use(attentionResourceRouter.middleware());
 
-
-
-
-/**
- * GET /api/tasks
- * GET /api/tasks/:id
- * POST /api/tasks
- * PUT /api/tasks/:id
- * DELETE /api/tasks/:id
- */
-//var taskResourceRouter = new ResourceRouter('tasks', taskApi, resourceOpts);
-//API.use(taskResourceRouter.middleware());
 
 /**
  * GET /api/cases

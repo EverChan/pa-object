@@ -62,7 +62,7 @@ exports.updateByUid = function * (uid, data){
         job: data.job,
         wechat: data.wechat,
         hobby: data.hobby,
-        addtime: new Date(),
+        isnew:2,//更新了用户信息,除了1，其他都是非new
         updatetime: new Date()
     };
 
@@ -84,7 +84,7 @@ exports.updatePwdByUid = function * (uid, data){
 };
 
 
-//查询用户 by id
+//查询自己(用户) by id
 var SELECT_BY_UID = multiline(function () {;/*
      SELECT *
      FROM users
@@ -99,6 +99,26 @@ exports.selectByUid = function * (uid){
     }
     return yield mysql.query(SELECT_BY_UID, [uid]);
 };
+
+
+//查询其他用户 by id
+var SELECT_OtherByUid = multiline(function () {;/*
+ SELECT uid,username,email,nickname,phone,sex,birthday,signtext,city,school,entryyear,job,qq,wechart,hobby
+ FROM users
+ WHERE uid = ?
+ */});
+
+exports.selectOtherByUid = function * (uid){
+    var uid = parseInt(uid, 10);
+    if (!uid) {
+        //查询所有的用户
+        return null;
+    }
+    return yield mysql.query(SELECT_OtherByUid, [uid]);
+};
+
+
+
 
 
 //查询用户 by username

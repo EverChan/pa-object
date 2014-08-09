@@ -12,59 +12,118 @@ var multiline = require('multiline');
 var mysql = require('../common/mysql');
 var utils = require('../lib/utils');
 
-//关组
-var NEW_Attention = multiline(function () {;/*
-     INSERT INTO attention
-     SET ?
-*/});
 
-exports.newAttention = function * (data){
-    var args = {
-        uid: data.uid,
-        attentionto:data.attentionto,
-        status:1,
-        addtime: new Date(),
-        updatetime: new Date()
-    };
-    return yield mysql.query(NEW_Attention, [args]);
-};
-
-
-//更新关注状态：取消关注，添加关注
-var UPDATE_Attention = multiline(function () {;/*
-     UPDATE attention
-     SET ?
-     WHERE aid=?
-*/});
-exports.updateByUid = function * (aid, data){
-    var _aid = parseInt(aid, 10);
-    if (!_aid) {
-        return null;
-    }
-
-    var args = {
-        status:data.status||0,
-        updatetime: new Date()
-    };
-
-    return yield mysql.query(CANCEL_Attention, [args, _aid]);
-};
-
-
-
-//查询关注
+//查询关注列表
 var SELECT_Attention = multiline(function () {;/*
  SELECT * FROM attention
- WHERE uid=? or attentionto=?
+ WHERE uid=?
  */});
 
-exports.selectAttentionByUid = function * (uid){
+exports.selectAttentionList = function* (uid){
     var _uid = parseInt(uid, 10);
     if (!_uid) {
         return null;
     }
-    return yield mysql.query(SELECT_Attention, [_uid, _uid]);
+    return yield mysql.query(SELECT_Attention, [_uid]);
 };
+
+//查询是否关注-单个
+var SELECT_AttentionedItem = multiline(function () {;/*
+    SELECT * FROM attention
+    WHERE uid=? and attentionto=?
+ */});
+exports.selectAttentionItem = function* (uid,attentionto){
+    var _uid = parseInt(uid, 10),
+        _attentionto=parseInt(attentionto, 10);
+    if (!_uid||!_attentionto) {
+        return null;
+    }
+    return yield mysql.query(SELECT_AttentionedItem, [_uid, _attentionto]);
+};
+
+
+//查询是否被关注-单个
+var SELECT_BeAttentioned = multiline(function () {;/*
+ SELECT * FROM attention
+ WHERE  attentionto=? and uid=? and status=2
+ */});
+exports.selectBeAttentionedItem = function* (uid,attentionto){
+    var _uid = parseInt(uid, 10),
+        _attentionto=parseInt(attentionto, 10);
+    if (!_uid||!_attentionto) {
+        return null;
+    }
+    return yield mysql.query(SELECT_BeAttentioned, [_uid, _attentionto]);
+};
+
+
+
+//创建关注
+var CREATE_Attention = multiline(function () {;/*
+     INSERT INTO attention
+     SET ?
+ */});
+
+exports.createAttention = function* (uid,attentionto){
+    var _uid = parseInt(uid, 10),
+        _attentionto=parseInt(attentionto, 10);
+    if (!_uid||!_attentionto) {
+        return null;
+    }
+
+    var data={
+        uid:_uid,
+        attentionto:_attentionto,
+        status:1,//1单方面关注，2代表相互关注，0代表没有关注
+        addtime: new Date(),
+        updatetime: new Date()
+    }
+
+    return yield mysql.query(CREATE_Attention, [data]);
+};
+
+//更新关注
+var UPDATE_Attention = multiline(function () {;/*
+ UPDATE attention
+ SET ?
+ WHERE uid=? and attentionto=?
+ */});
+exports.updateAttention=function* (uid,attentionto,data){
+    var _uid = parseInt(uid, 10),
+        _attentionto=parseInt(attentionto, 10);
+    if (!_uid||!_attentionto) {
+        return null;
+    }
+    var _data={
+        status:data.status,//1单方面关注，2代表相互关注，0代表没有关注
+        updatetime: new Date()
+    }
+
+    return yield mysql.query(UPDATE_Attention, [_data,_uid,_attentionto]);
+};
+
+//删除关注
+//更新关注
+var DEL_Attention = multiline(function () {;/*
+     DELETE
+     FROM attention
+     WHERE aid = ?
+ */});
+exports.deleteAttention=function* (aid){
+    var _aid = parseInt(aid);
+    if (!_aid) {
+        return null;
+    }
+    return yield mysql.query(DEL_Attention, [_aid]);
+};
+
+
+
+
+
+
+
+
 
 
 
