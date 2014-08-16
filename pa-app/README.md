@@ -9,3 +9,13 @@ doc: http://docs.phonegap.com/zh/edge/index.html
     $ cordova prepare              # or "cordova build"
 
 ```
+
+* plugin：http://plugins.cordova.io/
+
+* navigationbar：
+https://github.com/AndiDog/phonegap-ios-navigationbar-plugin
+
+
+
+* PushPlugin：
+https://github.com/phonegap-build/PushPlugin
