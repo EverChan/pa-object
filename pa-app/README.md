@@ -15,6 +15,13 @@ doc: http://docs.phonegap.com/zh/edge/index.html
 * navigationbar：
 https://github.com/AndiDog/phonegap-ios-navigationbar-plugin
 
+* statusBar：
+https://github.com/jonathannaguin/org.apache.cordova.statusbar.
+http://plugins.cordova.io/#/package/org.apache.cordova.statusbar
+
+
+https://github.com/phonegap-build/StatusBarPlugin
+
 
 
 * PushPlugin：

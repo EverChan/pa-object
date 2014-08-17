@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>31588326-D8AB-4500-A370-EC29A84170B7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>pa-dev</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FB558B5F-3FD7-4980-8500-DDD34CA15BAE</key>
+		<string>https://github.com/EverChan/pa-object.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>pa-app/pa/platforms/ios/pa-dev.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FB558B5F-3FD7-4980-8500-DDD34CA15BAE</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/EverChan/pa-object.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FB558B5F-3FD7-4980-8500-DDD34CA15BAE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FB558B5F-3FD7-4980-8500-DDD34CA15BAE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>pa-object</string>
+		</dict>
+	</array>
+</dict>
+</plist>
