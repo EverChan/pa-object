@@ -57,3 +57,45 @@ a, a:active, a:link {
     background-color: #ff4b4b;
 }
 
+
+
+/*=dialog=*/
+.ks-overlay {
+    position:absolute;
+    left:-9999px;
+    top:-9999px;
+    z-index: 9999;
+}
+.ks-overlay-hidden {
+    visibility: hidden;
+}
+
+.ks-overlay-mask-hidden {
+    display: none;
+}
+
+.ks-overlay-shown {
+    visibility: visible;
+}
+
+.ks-overlay-mask-shown{
+    display: block;
+}
+
+.ks-dialog-close{
+    display: block;
+    position: absolute;
+    right:10px;
+    top:10px;
+    width: 10px;
+    height: 0;
+    padding-top: 10px;
+    overflow: hidden;
+    background: url(images/icon-closed.png) no-repeat;
+    background-size: 10px 10px;
+    z-index: 10;
+}
+.ks-overlay-mask{
+    background-color: rgba(0,0,0,0.6);
+    z-index: 999;
+}

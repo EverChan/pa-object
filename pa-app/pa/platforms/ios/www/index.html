@@ -79,7 +79,7 @@
             <link rel="stylesheet" type="text/css" href="css/footer.css"/>
             <div id="footer">
                 <dl class="f-left">
-                    <dt>
+                    <dt class="j_cardWatch">
                         <img src="img/empty.jpg" alt=""/>
                         <b class="new-icon"></b>
                     </dt>
@@ -102,9 +102,33 @@
 
         </div>
     </div>
+    <div class="card-wrap">
+
+    </div>
 </div>
 <script>
     document.addEventListener('deviceready', function () {
+//        KISSY.use('com/card',function(S,Card){
+//            Card.show();
+//        });
+
+
+        //发消息
+        KISSY.use('dom,event,com/sendMessage', function (S,DOM,Event, SendMessage) {
+            Event.on(DOM.query("a",'#J_avtList'),'tap',function(ev){
+                ev.halt();
+                SendMessage.show();
+            });
+        });
+
+        //看名片
+        KISSY.use('dom,event,com/card', function (S,DOM,Event, Card) {
+            Event.on(DOM.query(".j_cardWatch"),'tap',function(ev){
+                ev.halt();
+                Card.show();
+            });
+        });
+
 
     }, false);
 </script>

@@ -7,8 +7,9 @@
         tag: '2014',
         packages: [
             {
-                name: 'components',
-                path: 'components/'
+                debug:true,
+                name: 'com',
+                path: '../www'
             }
         ]
     });
