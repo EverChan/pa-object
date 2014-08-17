@@ -24,6 +24,12 @@
                             "xml": "<preference name=\"StatusBarStyle\" value=\"lightcontent\" />",
                             "count": 1
                         }
+                    ],
+                    "/widget/plugins": [
+                        {
+                            "xml": "<feature name=\"PKNativeControls\"><param name=\"ios-package\" value=\"PKNativeControls\" /></feature>",
+                            "count": 1
+                        }
                     ]
                 }
             }
@@ -31,6 +37,9 @@
     },
     "installed_plugins": {
         "org.apache.cordova.statusbar": {
+            "PACKAGE_NAME": "com.ghy.pa"
+        },
+        "com.photokandy.nativecontrols": {
             "PACKAGE_NAME": "com.ghy.pa"
         }
     },

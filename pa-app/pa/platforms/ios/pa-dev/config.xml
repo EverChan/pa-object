@@ -22,12 +22,6 @@
     <feature name="StatusBar">
         <param name="ios-package" onload="true" value="CDVStatusBar" />
     </feature>
-    <!-- 已在 pa-dev-Info.plist 隐藏。
-    <preference name="StatusBarOverlaysWebView" value="false" />
-    <preference name="StatusBarBackgroundColor" value="#000000" />
-    <preference name="StatusBarStyle" value="lightcontent" />
-    -->
-    
     <name>pa-dev</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -38,4 +32,9 @@
     <content src="index.html" />
     <access origin="*" />
     <gap:plugin name="com.phonegap.plugin.statusbar" />
+    <plugins>
+        <feature name="PKNativeControls">
+            <param name="ios-package" value="PKNativeControls" />
+        </feature>
+    </plugins>
 </widget>

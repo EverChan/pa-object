@@ -39,6 +39,7 @@
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		262E075191D84A76948B54B6 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 788302EC0ACF421EA7190CF4 /* CDVStatusBar.m */; };
+		AFDC61B4CC9B439DA2D181CA /* PKNativeControls.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCCF6083C45423FB47C3AF1 /* PKNativeControls.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,8 @@
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "pa-dev/config.xml"; sourceTree = "<group>"; };
 		788302EC0ACF421EA7190CF4 /* CDVStatusBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVStatusBar.m"; path = "org.apache.cordova.statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		598400B5375140939E793233 /* CDVStatusBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVStatusBar.h"; path = "org.apache.cordova.statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		DCCCF6083C45423FB47C3AF1 /* PKNativeControls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PKNativeControls.m"; path = "com.photokandy.nativecontrols/PKNativeControls.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		B217B407AFAA4A60958D7EFF /* PKNativeControls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PKNativeControls.h"; path = "com.photokandy.nativecontrols/PKNativeControls.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +230,8 @@
 			children = (
 				788302EC0ACF421EA7190CF4 /* CDVStatusBar.m */,
 				598400B5375140939E793233 /* CDVStatusBar.h */,
+				DCCCF6083C45423FB47C3AF1 /* PKNativeControls.m */,
+				B217B407AFAA4A60958D7EFF /* PKNativeControls.h */,
 			);
 			name = Plugins;
 			path = "pa-dev/Plugins";
@@ -422,6 +427,7 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				262E075191D84A76948B54B6 /* CDVStatusBar.m in Sources */,
+				AFDC61B4CC9B439DA2D181CA /* PKNativeControls.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
