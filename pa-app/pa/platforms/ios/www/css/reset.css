@@ -159,9 +159,11 @@ a:hover, a:focus {
     visibility: hidden;
 }
 
+#content{
+    background-color: #fff;
+}
 .layout {
     width: 100%;
-    height: 100%;
 }
 
 .fl {

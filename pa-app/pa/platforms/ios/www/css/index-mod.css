@@ -3,7 +3,14 @@
 .index-wrap {
     background-image: url(images/bg-index.jpg);
     background-size: 100% 100%;
+    height: 480px;
 }
+.index-wrap #header{
+    border-bottom: 0 none;
+    color: #fff;
+    background-color: transparent;
+}
+
 
 .index-bd {
     margin: 0 auto;
@@ -70,6 +77,9 @@
 
 /*=for ip4=*/
 @media  screen and (max-height : 480px){
+    .index-wrap{
+        height: 420px;
+    }
     .index-bd .avt-list{
         padding-top: 10px;
     }

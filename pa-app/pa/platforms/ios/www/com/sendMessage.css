@@ -58,17 +58,5 @@
     background-image: url(../css/images/icon-cur-pa.png);
 }
 
-.sm-bd .sm-sendButton{
-    display: block;
-    margin: 0 auto;
-    width: 200px;
-    line-height:42px;
-    color: #fff;
-    font-size: 14px;
-    text-align: center;
-    background-color: #ff4b4b;
-    border-radius: 3px;
-}
-
 
 

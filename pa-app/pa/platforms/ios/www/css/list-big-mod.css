@@ -1,0 +1,53 @@
+/*=list-big with list-mod=*/
+.list-bd .list-item{
+    height: 79px;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+.list-bd dl{
+    padding-left: 20px;
+}
+.list-bd dt img{
+    width: 60px;
+    border-radius: 5px;
+}
+.list-bd dd.desc{
+    margin-left: 16px;
+    width: auto;
+}
+.list-bd dd.desc p{
+    width: auto;
+    background: transparent;
+    height: auto;
+}
+.list-bd dd.desc .item-name{
+    display: block;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4em;
+}
+
+.list-bd dd.desc .sex-w{
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 6px;
+    line-height: 18px;
+    background: url(images/icon-w.png) #ff4b4b 6px center no-repeat;
+    background-size: 6px 9px;
+}
+.list-bd dd.desc .sex-m{
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 6px;
+    line-height: 18px;
+    background: url(images/icon-m.png) #ff4b4b 6px center no-repeat;
+    background-size: 6px 9px;
+}
+.list-bd dd.desc .sex-m b,
+.list-bd dd.desc .sex-w b{
+    font-weight: 400;
+    color: #fff;
+    font-size: 12px;
+}

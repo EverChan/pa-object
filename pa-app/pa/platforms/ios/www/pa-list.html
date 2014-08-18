@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <title>login</title>
+    <!--=S assets=-->
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/k/seed-min.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <!--=E assets=-->
+</head>
+<body>
+<div id="page">
+    <div id="content">
+        <div class="layout">
+            <!--=S header =-->
+            <div id="header">
+                <a href="#" id="J_sideBarBtn" class="bar-btn menu-b-btn fl">
+                    <b class="new-icon"></b>
+                </a>
+                <a href="#" id="J_attetion" class="bar-btn attention-b-btn rl">
+                </a>
+                    <span class="title">
+                        我的Pa
+                    </span>
+            </div>
+            <!--=E header =-->
+
+            <!--=S list-mod =-->
+            <link rel="stylesheet" type="text/css" href="css/list-mod.css"/>
+            <div class="list-mod">
+                <div class="list-bd" id="J_listItem">
+                    <div class="list-item">
+                        <dl class="f-left">
+                            <dt class="j_cardWatch">
+                                <img src="img/1.jpg" alt="">
+                                <b class="new-icon"></b>
+                            </dt>
+                            <dd class="pa-1">
+                                <p></p>
+                                19:33
+                            </dd>
+                        </dl>
+                        <dl class="f-right">
+                            <dt>
+                                <img src="img/3.jpg" alt="">
+                            </dt>
+                            <dd class="pa-1">
+                                <p></p>
+                                17:33
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="list-ft"></div>
+            </div>
+            <!--=E list-mod =-->
+        </div>
+    </div>
+
+</div>
+<script>
+    document.addEventListener('deviceready', function () {
+
+        //看名片
+        KISSY.use('dom,event,com/card', function (S, DOM, Event, Card) {
+
+            //demo 先复制几个
+            var list = DOM.get("#J_listItem"),
+                    item = DOM.get(".list-item");
+            for (var i = 0; i < 10; i++) {
+                DOM.append(DOM.clone(item, true), list);
+            }
+
+            Event.on(DOM.query(".j_cardWatch"), 'tap', function (ev) {
+                ev.halt();
+                Card.show();
+            });
+
+            //菜单
+            Event.on(DOM.get("#J_sideBarBtn"), 'tap', function (ev) {
+                ev.halt();
+
+                var actionSheet = window.nativeControls.ActionSheet();
+
+                actionSheet.tintColor = window.nativeControls.Color("DarkGray");
+
+                actionSheet.addButtons([ "查看全部", "只看回复", "取消" ]);
+                actionSheet.cancelButtonIndex = 2;
+                actionSheet.destructiveButtonIndex = 1;
+                actionSheet.show();
+                actionSheet.addEventLister("tap", function (evt) {
+                    alert(evt.data);
+                });
+            });
+        });
+
+
+    }, false);
+</script>
+</body>
+</html>

@@ -14,7 +14,7 @@ KISSY.add('com/sendMessage', function (S, DOM, Event, IO,Overlay) {
                 <a href="#">pa</a><a href="#">pa</a><a href="#">pa</a> \
             </div>\
             <div class="sm-toolbar">\
-            <a href="#" class="sm-sendButton">发送</a>\
+            <a href="#" class="sub-big-Button">发送</a>\
             </div>\
                 </div>      \
         </div>';
@@ -24,20 +24,21 @@ KISSY.add('com/sendMessage', function (S, DOM, Event, IO,Overlay) {
         mask:true,
         points:['cc','cc']
     });
+    dialog.render();
+    var el=dialog.get('el');
+    Event.on(DOM.query('a',DOM.get('.j_sendMsg',el)),'tap',function(ev){
+        ev.halt();
+        var target=ev.currentTarget;
+        if(DOM.hasClass(target,'cur')){
+            DOM.removeClass(target,'cur');
+        }else{
+            DOM.addClass(target,'cur');
+        }
+    });
 
     return {
         show: function () {
-            dialog.render();
-            var el=dialog.get('el');
-            Event.on(DOM.query('a',DOM.get('.j_sendMsg',el)),'tap',function(ev){
-                ev.halt();
-                var target=ev.currentTarget;
-                if(DOM.hasClass(target,'cur')){
-                    DOM.removeClass(target,'cur');
-                }else{
-                    DOM.addClass(target,'cur');
-                }
-            });
+
             dialog.show();
             dialog.center();
         }
