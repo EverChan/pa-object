@@ -6,58 +6,65 @@
     background-image: url(images/bg-index.jpg);
     background-size: 100% 100%;
 }
-.myspace-wrap #header{
+
+.myspace-wrap #header {
     border-bottom: 0 none;
     color: #fff;
     background-color: transparent;
     position: relative;
 }
 
-.myspace-mod .myspace-hd{
+.myspace-mod .myspace-hd {
     padding-top: 23px;
     height: 155px;
     text-align: center;
     line-height: 2.2em;
 }
-.myspace-hd .avt-img img{
+
+.myspace-hd .avt-img img {
     width: 88px;
     border-radius: 48px;
     border: 4px solid #fff;
 }
-.myspace-hd .avt-nickname{
+
+.myspace-hd .avt-nickname {
     display: block;
     color: #fff;
     font-size: 14px;
 }
-.myspace-mod .myspace-bd{
+
+.myspace-mod .myspace-bd {
     background-color: #fff;
 }
 
-.myspace-bd dt{
+.myspace-bd dt {
     padding-left: 20px;
     font-size: 12px;
     color: #aaaaaa;
     line-height: 2.8em;
     border-bottom: 1px solid #ccc;
 }
-.myspace-bd dd{
-    margin-left:20px;
-    padding-right:10px;
+
+.myspace-bd dd {
+    margin-left: 20px;
+    padding-right: 10px;
     border-bottom: 1px solid #ccc;
 }
-.myspace-bd dd .item{
+
+.myspace-bd dd .item {
     display: block;
     padding-top: 16px;
     height: 50px;
     color: #555;
-    background: url(images/icon-s-arrow.png) right center  no-repeat;
+    background: url(images/icon-s-arrow.png) right center no-repeat;
     background-size: 6px 10px;
 }
-.myspace-bd dd.readonly .item{
+
+.myspace-bd dd.readonly .item {
     background-image: none;
 }
 
-.myspace-bd dd .key{
+.myspace-bd dd .key {
     display: block;
     color: #ff4b4b;
     font-size: 12px;

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <title>setting</title>
+    <!--=S assets=-->
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/k/seed-min.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <!--=E assets=-->
+</head>
+<body>
+<div id="page">
+    <div id="content">
+        <div class="layout">
+            <!--=S header =-->
+            <div id="header">
+                <a href="#" id="J_sideBarBtn" class="bar-btn menu-b-btn fl has-new">
+                    <b class="new-icon"></b>
+                </a>
+                <a href="#" id="J_attetion" class="bar-btn blank-btn rl"></a>
+                <span class="title">
+                    关于Pa
+                </span>
+            </div>
+            <!--=E header =-->
+
+            <!--=S setting-mod =-->
+            <link rel="stylesheet" type="text/css" href="css/about-mod.css"/>
+            <div class="about-mod">
+                <div class="about-hd">
+                    <div class="logo" style="background-image:url(img/about-logo.png);background-size: 76px auto;"></div>
+                </div>
+                <div class="about-bd">
+                    <dl>
+                        <dd>
+                            <a href="#" class="item has-new">
+                                <label class="key">
+                                    检查更新
+                                    <b class="new-icon"></b>
+                                </label>
+                                <span class="desc">有新版本可用</span>
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="#" class="item">
+                                <label class="key">功能介绍</label>
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="#" class="item">
+                                <label class="key">意见反馈</label>
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="#" class="item">
+                                <label class="key">给我评分</label>
+                            </a>
+                        </dd>
+
+                    </dl>
+                </div>
+            </div>
+            <!--=E setting-mod =-->
+
+        </div>
+    </div>
+
+</div>
+<script>
+    document.addEventListener('deviceready', function () {
+//        KISSY.use('com/card',function(S,Card){
+//            Card.show();
+//        });
+
+
+        //发消息
+        KISSY.use('dom,event,com/sendMessage', function (S,DOM,Event, SendMessage) {
+            Event.on(DOM.query("a",'#J_avtList'),'tap',function(ev){
+                ev.halt();
+                SendMessage.show();
+            });
+        });
+
+        //看名片
+        KISSY.use('dom,event,com/card', function (S,DOM,Event, Card) {
+            Event.on(DOM.query(".j_cardWatch"),'tap',function(ev){
+                ev.halt();
+                Card.show();
+            });
+        });
+
+
+    }, false);
+</script>
+</body>
+</html>

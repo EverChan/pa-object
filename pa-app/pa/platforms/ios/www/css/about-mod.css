@@ -1,0 +1,50 @@
+/*=about=*/
+.about-mod .about-hd {
+    height: 255px;
+}
+
+.about-hd .logo {
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.about-mod .about-bd{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.about-mod .about-bd dd{
+    margin-left: 20px;
+    padding-right: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.about-mod .about-bd dd:last-child{
+    border-bottom: none;
+}
+
+.myspace-bd dd.readonly .item {
+    background-image: none;
+}
+
+.about-bd dd .item{
+    display: block;
+    color: #555;
+    line-height: 3em;
+    font-size: 16px;
+    background: url(images/icon-s-arrow.png) right center no-repeat;
+    background-size: 6px 10px;
+    overflow: hidden;
+}
+.about-bd dd .item .key{
+    position: relative;
+}
+.about-bd dd .item .key .new-icon{
+    top:-2px;
+    right: -4px;
+}
+.about-bd dd .item .desc{
+    float: right;
+    margin-right: 18px;
+    color: #aaa;
+    font-size: 14px;
+}
