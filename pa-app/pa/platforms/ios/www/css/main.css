@@ -39,6 +39,10 @@ a, a:active, a:link {
     background-repeat: no-repeat;
 }
 
+.blank-btn{
+    background-color: transparent;
+}
+
 .menu-btn {
     background-size: 22px 15px;
     background-image: url(images/icon-menu.png);
@@ -61,6 +65,10 @@ a, a:active, a:link {
 .back-btn {
     background-size: 12px 21px;
     background-image: url(images/icon-back.png);
+}
+.back-b-btn{
+    background-size: 12px 21px;
+    background-image: url(images/icon-b-back.png);
 }
 
 .add-btn {
