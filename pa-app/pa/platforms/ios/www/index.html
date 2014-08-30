@@ -126,6 +126,14 @@
             });
         });
 
+        //侧滑菜单
+        KISSY.use('dom,event,com/menu',function(S,DOM,Event,Menu){
+            Event.on(DOM.get("#J_sideBarBtn"),'tap',function(ev){
+                ev.halt();
+                Menu.toggle();
+            });
+            Menu.toggle();
+        });
 
     }, false);
 </script>

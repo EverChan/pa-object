@@ -51,6 +51,10 @@
     border-bottom: 1px solid #ccc;
 }
 
+.myspace-bd dd:last-child {
+    border-bottom: none;
+}
+
 .myspace-bd dd .item {
     display: block;
     padding-top: 16px;

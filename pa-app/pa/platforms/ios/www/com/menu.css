@@ -1,0 +1,73 @@
+.menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120px;
+    overflow: hidden;
+    background-color: #fff;
+    height: 100%;
+    box-shadow:-6px 0 6px #ccc inset;
+}
+
+#content,
+#header,
+#footer {
+    transition: left 0.3s ease-out;
+    left: 0;
+}
+
+#content.menu-show,
+.menu-show #header,
+.menu-show #footer {
+    left: 120px;
+    z-index: 2;
+}
+
+.menu-mod .menu-hd{
+    padding: 10px;
+    text-align: center;
+}
+.menu-mod .menu-bd{
+}
+.menu-bd a{
+    display: block;
+    padding-top: 80px;
+    height:0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow:hidden;
+}
+.menu-bd a .new-icon{
+    right: 36px;
+}
+
+.menu-bd a.m1{
+    background-image: url(../css/images/icon-menu-cur-1.png);
+    background-size: 34px 40px;
+}
+
+.menu-bd a.m1.cur{
+    background-image: url(../css/images/icon-menu-cur-1.png);
+    background-size: 34px 40px;
+}
+
+
+.menu-bd a.m2{
+    background-image: url(../css/images/icon-menu-2.png);
+    background-size: 35px 40px;
+}
+
+.menu-bd a.m3{
+    background-image: url(../css/images/icon-menu-3.png);
+    background-size: 44px 42px;
+}
+
+.menu-bd a.m4{
+    background-image: url(../css/images/icon-menu-4.png);
+    background-size: 20px 42px;
+}
+
+.menu-bd a.m5{
+    background-image: url(../css/images/icon-menu-5.png);
+    background-size: 60px 43px;
+}

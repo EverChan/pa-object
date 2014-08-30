@@ -1,6 +1,13 @@
 /*==common mod==*/
 body, #page, #content {
+    position: relative;
     height: 100%;
+    overflow-y: hidden;
+}
+
+.hidden{
+    display: none;
+    visibility: hidden;
 }
 
 a, a:active, a:link {
