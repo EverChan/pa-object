@@ -1,6 +1,6 @@
 /*=about=*/
 .about-mod .about-hd {
-    height: 255px;
+    height: 236px;
 }
 
 .about-hd .logo {
@@ -9,16 +9,18 @@
     background-repeat: no-repeat;
 }
 
-.about-mod .about-bd{
+.about-mod .about-bd {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
 }
-.about-mod .about-bd dd{
+
+.about-mod .about-bd dd {
     margin-left: 20px;
     padding-right: 10px;
     border-bottom: 1px solid #ddd;
 }
-.about-mod .about-bd dd:last-child{
+
+.about-mod .about-bd dd:last-child {
     border-bottom: none;
 }
 
@@ -26,7 +28,7 @@
     background-image: none;
 }
 
-.about-bd dd .item{
+.about-bd dd .item {
     display: block;
     color: #555;
     line-height: 3em;
@@ -35,14 +37,17 @@
     background-size: 6px 10px;
     overflow: hidden;
 }
-.about-bd dd .item .key{
+
+.about-bd dd .item .key {
     position: relative;
 }
-.about-bd dd .item .key .new-icon{
-    top:-2px;
+
+.about-bd dd .item .key .new-icon {
+    top: -2px;
     right: -4px;
 }
-.about-bd dd .item .desc{
+
+.about-bd dd .item .desc {
     float: right;
     margin-right: 18px;
     color: #aaa;
