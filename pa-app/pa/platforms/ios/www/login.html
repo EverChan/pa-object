@@ -67,21 +67,9 @@
 
 
         //发消息
-        KISSY.use('dom,event,com/sendMessage', function (S,DOM,Event, SendMessage) {
-            Event.on(DOM.query("a",'#J_avtList'),'tap',function(ev){
-                ev.halt();
-                SendMessage.show();
-            });
-        });
+        KISSY.use('com/login', function (S,Login) {
 
-        //看名片
-        KISSY.use('dom,event,com/card', function (S,DOM,Event, Card) {
-            Event.on(DOM.query(".j_cardWatch"),'tap',function(ev){
-                ev.halt();
-                Card.show();
-            });
         });
-
 
     }, false);
 </script>

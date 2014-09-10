@@ -21,6 +21,7 @@
         "koa-swig": "0.4.1",
         "koa-session":"2.0.0",
         "koa-logger":"1.2.2",
+        "koa-cors":"0.0.13",
         "mysql": "2.4.1",
         "colors" : "~0.6.2",
         "log4js" : "0.6.10",

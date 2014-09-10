@@ -1,4 +1,3 @@
-
 'use strict';
 
 /**
@@ -10,21 +9,29 @@ var compose = require('koa-compose');
 var csrf = require('koa-middlewares').csrf;
 
 module.exports = function (app) {
-  csrf(app);
+    csrf(app);
 //  if (process.env.NODE_ENV === 'test') {
-  if (true) {
-    return noop;
-  }
-  return compose([csrf.middleware, setCsrf]);
+    if (true) {
+        return noop;
+    }
+    return compose([csrf.middleware, setCsrf]);
 };
 
-function* setCsrf(next) {
-  this.locals = this.locals || {};
+function
+*
+setCsrf(next)
+{
+    this.locals = this.locals || {};
 
-  this.locals.csrf = this.csrf;
-  yield* next;
+    this.locals.csrf = this.csrf;
+    yield*
+    next;
 }
 
-function* noop(next) {
-  return yield* next;
+function
+*
+noop(next)
+{
+    return yield*
+    next;
 }

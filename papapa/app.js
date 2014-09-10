@@ -21,6 +21,7 @@ var middlewares = require('koa-middlewares');
 //var taobaostatus = require('koa-taobaostatus');
 var parameter = require('./middlewares/parameter');
 
+
 var app = koa();
 app.keys = config.keys;
 
@@ -39,6 +40,11 @@ app.keys = config.keys;
 
 app.use(middlewares.favicon());
 app.use(middlewares.rt());
+
+
+//跨域中间件
+var cors = require('koa-cors');
+app.use(cors());
 
 //静态资源
 app.use(middlewares.staticCache({
@@ -59,10 +65,12 @@ app.use(middlewares.cookieSession());
 app.use(middlewares.bodyparser());
 
 // csrf check
-app.use(csrf(app));
+//app.use(csrf(app));
 
 //用户信息验证 （基于 buc 的）
 app.use(auth());
+
+
 
 // swig render，页面渲染===
 swig(app, {
