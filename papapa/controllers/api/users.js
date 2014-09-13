@@ -12,30 +12,56 @@ var rules = require('../../lib/rules');
 var p = require('parameter');
 
 // GET /api/users
-exports.index = function * ()
+exports.index = function
+*()
 {
     this.verifyParams({
         uid: {required: false, type: p.Id}
     });
 //    var page = utils.parsePage(this.query);
 
-    this.body = yield Users.selectByUid();
+    var result = yield Users.selectByUid();
+
+    //推荐的人
+    var resList = [];
+//    result.forEach(function(item){
+//
+//    });
+
+    //demo数据
+    for (var i = 0; i < 9; i++) {
+        resList.push({
+            uid: i,
+            pic: 'img/1.jpg',
+            nickname: i + '' + i
+        });
+    }
+
+    this.body = {
+        isSuccess: 1,
+        data: resList
+    };
 }
 ;
 
 // GET /api/users:uid
-exports.show = function * ()
+exports.show = function
+*()
 {
     this.verifyParams(rules.id);
 
     //session中获取uid
     var uid = this.session.user.uid || 1;
 
-    var id=this.params.id;
+    var id = this.params.id;//phone
+
+    var pwd = this.request.body;
+
+
     //查询自身
-    if(uid==id){
+    if (uid == id) {
         this.body = yield Users.selectByUid(uid);
-    }else{
+    } else {
         this.body = yield Users.selectOtherByUid(this.params.id);
     }
 
@@ -43,10 +69,9 @@ exports.show = function * ()
 ;
 
 
-
-
 // POST /api/users
-exports.create = function * (next)
+exports.create = function
+*(next)
 {
 
     this.verifyParams({
@@ -63,7 +88,8 @@ exports.create = function * (next)
 ;
 
 // PUT /api/cases/:id
-exports.update = function * (next)
+exports.update = function
+*(next)
 {
     this.verifyParams(rules.id);
 
@@ -75,7 +101,8 @@ exports.update = function * (next)
 
 
 // DELETE /api/cases/:id
-exports.destroy = function * (next)
+exports.destroy = function
+*(next)
 {
     this.verifyParams(rules.id);
 

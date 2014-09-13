@@ -14,7 +14,8 @@ var p = require('parameter');
 var randomToken = require('random-token');
 
 // GET /api/login
-exports.index = function * ()
+exports.index = function
+*()
 {
     //session中获取uid
     var uid = this.session.user.uid || 1;
@@ -30,7 +31,7 @@ exports.index = function * ()
 ;
 
 // GET /api/login:id
-exports.show = function * ()
+exports.show = function *()
 {
     //session中获取uid
     var uid = this.session.user.uid || 1;
@@ -39,54 +40,85 @@ exports.show = function * ()
         id: {required: true, type: 'string'}
     });
 
-    var otherId = this.params.id;
+    var token = this.params.id;//token
 
-    var token=(this.request.body||{}).token;
 
     //如果有token，则查询token的信息
-    if(token){
-        this.body = yield Login.getLoginByToken(uid,token);
-    }else{
-        this.body = yield Login.getLoginRecently(otherId);
-    }
+    if (token) {
+        var result = yield Login.getLoginByToken(uid, token);
+        var startTime = new Date(result.addtime),
+            nowTime = new Date();
 
+        var timeArea = 1*60*60*1000;//一个小时间隔
+        if (nowTime.valueOf() - startTime.valueOf() > timeArea) {
+            result.isSuccess = 0;
+            result.error = 'token过期';
+        } else {
+            result.isSuccess = 1;
+        }
+        this.body = result;
+
+    } else {
+        this.body = yield Login.getLoginRecently(uid);
+    }
 }
 ;
 
 
 // post /api/login
-exports.create = function * ()
+exports.create = function
+*()
 {
     //session中获取uid
     var uid = this.session.user.uid || 1;
 
     this.verifyParams({
-       location: {required: true, type: 'string'}
+        phone: {required: true, type: 'string'},
+        pwd: {required: true, type: 'string'},
+        location: {required: false, type: 'string'}
     });
 
-    var location = (this.request.body||{}).location;
+    var phone = (this.request.body || {}).phone;
+    var pwd = (this.request.body || {}).pwd;
+    var location = (this.request.body || {}).location;
 
-    var _data={
-        location:location,
-        token:randomToken(16)
+    var _data = {
+        phone: phone,
+        pwd: pwd,
+        location: location,
+        isSuccess: 1,
+        token: randomToken(16)
     };
 
-    //创建登陆记录
-    yield Login.createLogin(uid, _data);
 
-    this.body=_data;
+    //创建登陆记录
+    var result = yield Login.createLogin(uid, _data);
+
+    if (result.error) {
+        _data.isSuccess = 0;
+        _data.error = result.error;
+    }
+    delete _data.pwd;//删除密码值
+
+    this.body = _data;
 
 }
 ;
 
 //put /api/login:id
-exports.update=function*(){
+exports.update = function
+*()
+{
 
-    this.status=200;
+    this.status = 200;
 }
+;
 
 //DELETE /api/login:id
-exports.destroy=function*(){
+exports.destroy = function
+*()
+{
 
-    this.status=200;
+    this.status = 200;
 }
+;

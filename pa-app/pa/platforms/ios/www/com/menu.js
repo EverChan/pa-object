@@ -6,19 +6,20 @@ KISSY.add('com/menu', function (S, DOM, Event, IO) {
         TEMPLETE = '<div class="menu-wrap hidden">     \
             <div class="menu-mod">\
                 <div class="menu-bd">\
-                    <a href="#" class="m1 cur">Pa一下</a>\
-                    <a href="#" class="m2 has-new">我的Pa<b class="new-icon"></b></a>\
-                    <a href="#" class="m3">我的关注</a>\
+                    <a href="index.html" class="m1">Pa一下</a>\
+                    <a href="pa-list.html" class="m2 has-new">我的Pa<b class="new-icon"></b></a>\
+                    <a href="at-list.html" class="m3">我的关注</a>\
                     <a href="#" class="m4">我</a>\
                     <a href="#" class="m5">关于Pa</a>\
                 </div>\
             </div>\
         </div>';
-    var content = DOM.get("#content"), menu;
+    var content = DOM.get("#content"), menu,
+        parent=content.parentNode;
 
     function init() {
         menu = DOM.create(TEMPLETE);
-        DOM.append(menu, content.parentNode);
+        DOM.append(menu, parent);
     }
 
     //初始化
@@ -36,6 +37,15 @@ KISSY.add('com/menu', function (S, DOM, Event, IO) {
         },
         toggle: function () {
             DOM.hasClass(menu, 'hidden') ? exports.show() : exports.hide();
+        },
+        setCur:function(c){
+            var CUR='cur';
+            var item=DOM.get(c,parent);
+            debugger;
+            if(item){
+                DOM.addClass(item,CUR);
+                DOM.attr(item,'href','#');
+            }
         }
     };
 

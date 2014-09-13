@@ -128,7 +128,7 @@ var SELECT_BY_USERNAME = multiline(function () {;/*
      WHERE username = ?
 */});
 
-exports.selectByPhone = function * (username){
+exports.selectByUsername = function * (username){
     var _username = String(username);
 
     return yield mysql.query(SELECT_BY_USERNAME, [_username]);
@@ -141,10 +141,13 @@ var SELECT_BY_PHONE = multiline(function () {;/*
      WHERE phone = ?
 */});
 
-exports.selectByPhone = function * (phone){
+exports.selectByPhone = function *(phone){
+
+
     var _phone = String(phone);
 
     return yield mysql.query(SELECT_BY_PHONE, [_phone]);
+
 };
 
 

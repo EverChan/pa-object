@@ -25,7 +25,7 @@
                 <a href="#" id="J_sideBarBtn" class="bar-btn menu-btn fl has-new">
                     <b class="new-icon"></b>
                 </a>
-                <a href="#" id="J_attetion" class="bar-btn attention-btn rl">
+                <a href="at-list.html" id="J_attetion" class="bar-btn attention-btn rl">
                 </a>
                     <span class="title">
                         Pa一下
@@ -38,37 +38,10 @@
             <div class="index-mod">
                 <div class="index-bd">
                     <div class="avt-list" id="J_avtList">
-                        <a href="#" class="avt-item">
-                            <img src="img/1.jpg" alt="11"/>
-                        </a>
-                        <a href="#" class="avt-item">
-                            <img src="img/1.jpg" alt="11"/>
-                        </a>
-                        <a href="#" class="avt-item">
-                            <img src="img/1.jpg" alt="11"/>
-                        </a>
-                        <a href="#" class="avt-item">
-                            <img src="img/1.jpg" alt="11"/>
-                        </a>
-                        <a href="#" class="avt-item">
-                            <img src="img/1.jpg" alt="11"/>
-                        </a>
-                        <a href="#" class="avt-item">
-                            <img src="img/1.jpg" alt="11"/>
-                        </a>
-                        <a href="#" class="avt-item">
-                            <img src="img/1.jpg" alt="11"/>
-                        </a>
-                        <a href="#" class="avt-item">
-                            <img src="img/1.jpg" alt="11"/>
-                        </a>
-                        <a href="#" class="avt-item">
-                            <img src="img/1.jpg" alt="11"/>
-                        </a>
                     </div>
                 </div>
                 <div class="index-ft">
-                    <a href="#" id="J_avtListRefresh" class="avt-list-refresh refresh-loadding">
+                    <a href="#" id="J_avtListRefresh" class="avt-list-refresh">
                         <b class="icon-refresh"></b>换一组试试
                     </a>
                 </div>
@@ -105,35 +78,69 @@
 </div>
 <script>
     document.addEventListener('deviceready', function () {
-//        KISSY.use('com/card',function(S,Card){
-//            Card.show();
-//        });
 
-
-        //发消息
-        KISSY.use('dom,event,com/sendMessage', function (S,DOM,Event, SendMessage) {
-            Event.on(DOM.query("a",'#J_avtList'),'tap',function(ev){
-                ev.halt();
-                SendMessage.show();
-            });
+        KISSY.use('com/login', function (S, Login) {
+            Login.check(indexInit);
         });
 
-        //看名片
-        KISSY.use('dom,event,com/card', function (S,DOM,Event, Card) {
-            Event.on(DOM.query(".j_cardWatch"),'tap',function(ev){
-                ev.halt();
-                Card.show();
-            });
-        });
+        function indexInit() {
+            KISSY.use('dom,event,com/util', function (S, DOM, Event, Util) {
+                var avtList = DOM.get("#J_avtList"),
+                        btn = DOM.get("#J_avtListRefresh");
+                var url = Util.url('users'),
+                        TEMPLETE = '<a href="#{uid}" data-uid="{uid}" class="avt-item"><img src="{pic}" alt="{nickname}"/></a>';
 
-        //侧滑菜单
-        KISSY.use('dom,event,com/menu',function(S,DOM,Event,Menu){
-            Event.on(DOM.get("#J_sideBarBtn"),'tap',function(ev){
-                ev.halt();
-                Menu.toggle();
+                var LOADDING='refresh-loadding';
+
+                Event.on(btn, 'tap', function (ev) {
+                    ev.halt();
+                    //不重复刷新
+                    if(DOM.hasClass(btn,LOADDING))return;
+                    DOM.addClass(btn, LOADDING);
+                    Util.get(url, null, {}, function (d) {
+                        if (d.isSuccess == 1) {
+                            var arr=[];
+                            S.each(d.data,function(item){
+                                arr.push(S.substitute(TEMPLETE,item));
+                            });
+                            DOM.html(avtList,arr.join(""));
+                        }
+                    }, function () {
+                        DOM.removeClass(btn, LOADDING);
+                    });
+                });
+
+                Event.fire(btn,'tap');
+
+                //发消息
+                KISSY.use('dom,event,com/sendMessage', function (S, DOM, Event, SendMessage) {
+                    Event.delegate(avtList, 'tap','a',function (ev) {
+                        ev.halt();
+                        var target=ev.currentTarget;
+                        console.log(DOM.attr(target,'data-uid'));
+                        SendMessage.show();
+                    });
+                });
             });
-            Menu.toggle();
-        });
+
+
+            //看名片
+            KISSY.use('dom,event,com/card', function (S, DOM, Event, Card) {
+                Event.on(DOM.query(".j_cardWatch"), 'tap', function (ev) {
+                    ev.halt();
+                    Card.show();
+                });
+            });
+
+            //侧滑菜单
+            KISSY.use('dom,event,com/menu', function (S, DOM, Event, Menu) {
+                Event.on(DOM.get("#J_sideBarBtn"), 'tap', function (ev) {
+                    ev.halt();
+                    Menu.toggle();
+                });
+                Menu.setCur('.m1');
+            });
+        }
 
     }, false);
 </script>

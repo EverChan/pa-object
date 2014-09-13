@@ -82,22 +82,17 @@
                 Card.show();
             });
 
-            //菜单
-            Event.on(DOM.get("#J_sideBarBtn"), 'tap', function (ev) {
-                ev.halt();
 
-                var actionSheet = window.nativeControls.ActionSheet();
 
-                actionSheet.tintColor = window.nativeControls.Color("DarkGray");
-
-                actionSheet.addButtons([ "查看全部", "只看回复", "取消" ]);
-                actionSheet.cancelButtonIndex = 2;
-                actionSheet.destructiveButtonIndex = 1;
-                actionSheet.show();
-                actionSheet.addEventLister("tap", function (evt) {
-                    alert(evt.data);
+            //侧滑菜单
+            KISSY.use('dom,event,com/menu', function (S, DOM, Event, Menu) {
+                Event.on(DOM.get("#J_sideBarBtn"), 'tap', function (ev) {
+                    ev.halt();
+                    Menu.toggle();
                 });
+                Menu.setCur('.m3');
             });
+
         });
 
 

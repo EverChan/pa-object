@@ -39,11 +39,12 @@
                 <div class="login-bd">
                     <form id="J_form">
                         <div class="login-texts">
-                            <p><input class="text" type="text" placeholder="手机号"/></p>
-                            <p><input class="text" type="password" placeholder="密码"/></p>
+                            <p><input class="text" type="text" name="phone" placeholder="手机号"/></p>
+
+                            <p><input class="text" type="password" name="password" placeholder="密码"/></p>
                         </div>
                         <p class="tool-bar">
-                            <button class="sub-big-Button">
+                            <button class="sub-big-Button disabled" disabled id="J_loginButton" type="submit">
                                 登录
                             </button>
                         </p>
@@ -61,16 +62,34 @@
 </div>
 <script>
     document.addEventListener('deviceready', function () {
-//        KISSY.use('com/card',function(S,Card){
-//            Card.show();
-//        });
+        //登陆
+        KISSY.use('dom,event,com/login', function (S, DOM, Event, Login) {
+            var form = DOM.get("#J_form"),
+                    btn = DOM.get("#J_loginButton");
 
+            var phone = form.phone, pwd = form.password;
 
-        //发消息
-        KISSY.use('com/login', function (S,Login) {
+            Event.on([phone, pwd], 'valuechange', S.buffer(checkIpt, 300, this));
 
+            Event.on(form, 'submit', function (ev) {
+                ev.halt();
+                Login.login(phone.value, pwd.value);
+            });
+
+            //返回按钮
+            var prevUrl = localStorage.prevUrl || 'index.html';
+            DOM.attr("#J_sideBarBtn", 'href', prevUrl);
+
+            function checkIpt() {
+                if (phone.value == '' || pwd.value == '') {
+                    DOM.attr(btn, 'disabled', 'disabled');
+                    DOM.addClass(btn, 'disabled');
+                } else {
+                    DOM.removeAttr(btn, 'disabled');
+                    DOM.removeClass(btn, 'disabled');
+                }
+            }
         });
-
     }, false);
 </script>
 </body>

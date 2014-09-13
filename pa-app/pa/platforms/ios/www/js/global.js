@@ -15,7 +15,8 @@
     });
 
     var HOST = "http://127.0.0.1:3000/", URLS = {
-        login: 'api/users/'
+        login: 'api/login/',
+        users:'api/users'
     };
 
 
@@ -28,7 +29,16 @@
             return HOST + URLS[key];
         };
 
-        exports.get = function (url, id, cb) {
+        /**
+         * get请求===
+         * @param url
+         * @param id
+         * @param data
+         * @param cb
+         * @param cbComplete
+         * @returns {IO}
+         */
+        exports.get = function (url, id, data, cb,cbComplete) {
             var _url = url;
             if (id) {
                 _url += id;
@@ -37,6 +47,30 @@
             var a = new IO({
                 url: _url,
                 type: "get",
+                data:data||{},
+                success: cb,
+                error: function (e) {
+                    console.log(e);
+                },
+                complete:cbComplete||function(){
+                    console.log('ajax complete');
+                }
+            });
+            return a;
+        };
+
+        /**
+         * post请求
+         * @param url
+         * @param data
+         * @param cb
+         * @returns {IO}
+         */
+        exports.post=function(url,data,cb){
+            var a = new IO({
+                url: url,
+                type: "post",
+                data:data||{},
                 success: cb,
                 error: function (e) {
                     console.log(e);
@@ -44,6 +78,8 @@
             });
             return a;
         };
+
+
 
         return exports;
     }, {

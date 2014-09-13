@@ -11,6 +11,9 @@ var mysql = require('../common/mysql');
 var utils = require('../lib/utils');
 
 
+var usersModel=require('./users');
+
+
 //查询最新的登陆信息列表
 var SELECT_LoginList = multiline(function () {;/*
  SELECT * FROM login
@@ -48,7 +51,8 @@ exports.getLoginByToken=function* (uid,token){
     if (!_uid) {
         return null;
     }
-    return yield mysql.query(SELECT_LoginByToken, [_uid,token]);
+    var result=yield mysql.query(SELECT_LoginByToken, [_uid,token]);
+    return result[0];
 }
 
 
@@ -63,14 +67,34 @@ exports.createLogin=function* (uid,data){
         return null;
     }
 
+    var error='';
+
+
+
+    //查询用户
+    var users= (yield usersModel.selectByPhone(data.phone))[0];
+
+    console.log(users,data.pwd);
+    if(users){
+        if(users.password!=data.pwd){
+            error='密码错误';
+        }
+    }else{
+        error='用户不存在';
+    }
+
     var _data={
         uid:_uid,
         location:data.location,
+        phone:data.phone,
         token:data.token,
+        error:error,//复制错误信息
         addtime:new Date()
     };
 
-    return yield mysql.query(CREATE_Login, [_data]);
+    yield mysql.query(CREATE_Login, [_data]);
+
+    return _data;
 }
 
 
