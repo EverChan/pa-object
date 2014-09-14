@@ -31,7 +31,8 @@ exports.index = function
 ;
 
 // GET /api/login:id
-exports.show = function *()
+exports.show = function
+*()
 {
     //session中获取uid
     var uid = this.session.user.uid || 1;
@@ -49,7 +50,7 @@ exports.show = function *()
         var startTime = new Date(result.addtime),
             nowTime = new Date();
 
-        var timeArea = 1*60*60*1000;//一个小时间隔
+        var timeArea = 1 * 60 * 60 * 1000;//一个小时间隔
         if (nowTime.valueOf() - startTime.valueOf() > timeArea) {
             result.isSuccess = 0;
             result.error = 'token过期';
@@ -98,6 +99,7 @@ exports.create = function
         _data.isSuccess = 0;
         _data.error = result.error;
     }
+
     delete _data.pwd;//删除密码值
 
     this.body = _data;

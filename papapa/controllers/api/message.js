@@ -12,7 +12,8 @@ var rules = require('../../lib/rules');
 var p = require('parameter');
 
 // GET /api/message
-exports.index = function * ()
+exports.index = function
+*()
 {
     //session中获取uid
     var uid = this.session.user.uid || 1;
@@ -28,7 +29,8 @@ exports.index = function * ()
 ;
 
 // GET /api/message:id(sendid)
-exports.show = function * ()
+exports.show = function
+*()
 {
     //session中获取uid
     var uid = this.session.user.uid || 1;
@@ -46,35 +48,39 @@ exports.show = function * ()
 
 
 // post /api/message
-exports.create = function * ()
+exports.create = function
+*()
 {
     //session中获取uid
     var uid = this.session.user.uid || 1;
 
     this.verifyParams({
         sendid: {required: true, type: p.Id},
-        title:{required:true,type:'string'}
+        title: {required: true, type: 'string'}
     });
 
     var sendid = this.request.body.sendid,
-        title=this.request.body.title,
-        content=this.request.body.content|"";
+        title = this.request.body.title,
+        content = this.request.body.content | "";
 
-    var d= {
-        sendid:sendid,
-        title:title,
-        content:content
+    var d = {
+        sendid: sendid,
+        title: title,
+        content: content
     };
 
-    yield Message.sendMessage(uid,d);
+    yield Message.sendMessage(uid, d);
 
     this.status = 200;
+    this.body = {isSuccess: 1, data: d};
 
-};
+}
+;
 
 
 // PUT /api/message/:message
-exports.update = function * ()
+exports.update = function
+*()
 {
     //更新消息
 
@@ -82,27 +88,28 @@ exports.update = function * ()
 }
 
 // DELETE /api/message/:id
-exports.destroy = function * ()
+exports.destroy = function
+*()
 {
     //session中获取uid
     var uid = this.session.user.uid || 1;
 
     this.verifyParams({
         id: {required: true, type: p.Id},
-        mid:{required:false,type: p.Id}
+        mid: {required: false, type: p.Id}
     });
 
     var sendid = this.params.id;
 
 
     //mid参数
-    var mid=(this.request.body||{}).mid;
+    var mid = (this.request.body || {}).mid;
 
     //可通过mid直接做删除标记
-    if(mid){
-        yield Message.deleteMessageByMid(uid,mid);
-    }else{
-        yield Message.deleteMessage(uid,sendid);
+    if (mid) {
+        yield Message.deleteMessageByMid(uid, mid);
+    } else {
+        yield Message.deleteMessage(uid, sendid);
     }
 
     this.status = 200;

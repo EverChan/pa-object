@@ -69,12 +69,11 @@ exports.createLogin=function* (uid,data){
 
     var error='';
 
-
-
     //查询用户
     var users= (yield usersModel.selectByPhone(data.phone))[0];
 
-    console.log(users,data.pwd);
+
+    //console.log(users,data.pwd);
     if(users){
         if(users.password!=data.pwd){
             error='密码错误';

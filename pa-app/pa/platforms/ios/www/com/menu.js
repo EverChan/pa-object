@@ -41,7 +41,6 @@ KISSY.add('com/menu', function (S, DOM, Event, IO) {
         setCur:function(c){
             var CUR='cur';
             var item=DOM.get(c,parent);
-            debugger;
             if(item){
                 DOM.addClass(item,CUR);
                 DOM.attr(item,'href','#');

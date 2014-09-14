@@ -40,7 +40,7 @@
                 <div class="list-bd" id="J_listItem">
                     <div class="list-item">
                         <dl class="f-left">
-                            <dt class="j_cardWatch">
+                            <dt class="j_cardWatch" data-uid="2">
                                 <img src="img/1.jpg" alt="">
                                 <b class="new-icon"></b>
                             </dt>
@@ -79,7 +79,8 @@
 
             Event.on(DOM.query(".j_cardWatch"), 'tap', function (ev) {
                 ev.halt();
-                Card.show();
+                var target=ev.currentTarget;
+                Card.show(target);
             });
 
 

@@ -53,18 +53,24 @@ exports.show = function
     //session中获取uid
     var uid = this.session.user.uid || 1;
 
+    var myPhone = this.session.user.phone || '13867458172';
+
+
     var id = this.params.id;//phone
 
-    var pwd = this.request.body;
-
+    console.log(this.session.user, id);
 
     //查询自身
-    if (uid == id) {
-        this.body = yield Users.selectByUid(uid);
+    var persionItem;
+    if (uid == id || myPhone == id) {
+        persionItem = yield Users.selectByUid(uid);
     } else {
-        this.body = yield Users.selectOtherByUid(this.params.id);
+        persionItem = yield Users.selectOtherByUid(id);
     }
 
+    this.body = {
+        isSuccess: 1,
+        data: persionItem[0]};
 }
 ;
 

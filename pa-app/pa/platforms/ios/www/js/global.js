@@ -16,7 +16,8 @@
 
     var HOST = "http://127.0.0.1:3000/", URLS = {
         login: 'api/login/',
-        users:'api/users'
+        users:'api/users/',
+        message:'api/message/'
     };
 
 
@@ -51,6 +52,7 @@
                 success: cb,
                 error: function (e) {
                     console.log(e);
+                    alert('系统错误。');
                 },
                 complete:cbComplete||function(){
                     console.log('ajax complete');

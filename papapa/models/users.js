@@ -103,7 +103,7 @@ exports.selectByUid = function * (uid){
 
 //查询其他用户 by id
 var SELECT_OtherByUid = multiline(function () {;/*
- SELECT uid,username,email,nickname,phone,sex,birthday,signtext,city,school,entryyear,job,qq,wechart,hobby
+ SELECT uid,username,email,nickname,phone,sex,birthday,signtext,city,school,entryyear,job,qq,wechat,hobby
  FROM users
  WHERE uid = ?
  */});

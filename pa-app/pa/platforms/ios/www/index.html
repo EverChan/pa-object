@@ -52,7 +52,7 @@
             <link rel="stylesheet" type="text/css" href="css/footer.css"/>
             <div id="footer">
                 <dl class="f-left">
-                    <dt class="j_cardWatch">
+                    <dt class="j_cardWatch" data-uid="2">
                         <img src="img/empty.jpg" alt=""/>
                         <b class="new-icon"></b>
                     </dt>
@@ -117,8 +117,7 @@
                     Event.delegate(avtList, 'tap','a',function (ev) {
                         ev.halt();
                         var target=ev.currentTarget;
-                        console.log(DOM.attr(target,'data-uid'));
-                        SendMessage.show();
+                        SendMessage.show(target);
                     });
                 });
             });
@@ -128,7 +127,8 @@
             KISSY.use('dom,event,com/card', function (S, DOM, Event, Card) {
                 Event.on(DOM.query(".j_cardWatch"), 'tap', function (ev) {
                     ev.halt();
-                    Card.show();
+                    var target=ev.currentTarget;
+                    Card.show(target);
                 });
             });
 
