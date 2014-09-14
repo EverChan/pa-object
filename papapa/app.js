@@ -22,8 +22,6 @@ var middlewares = require('koa-middlewares');
 var parameter = require('./middlewares/parameter');
 
 
-var session = require('koa-session');
-
 var app = koa();
 app.keys = config.keys;
 
@@ -40,10 +38,12 @@ app.keys = config.keys;
 //  }
 //}));
 
-app.use(session());
-
 app.use(middlewares.favicon());
 app.use(middlewares.rt());
+
+
+var session = require('koa-generic-session');
+app.use(session());
 
 
 //跨域中间件
