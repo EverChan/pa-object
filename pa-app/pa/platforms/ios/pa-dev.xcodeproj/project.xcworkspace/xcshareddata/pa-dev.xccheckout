@@ -10,29 +10,29 @@
 	<string>pa-dev</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>FB558B5F-3FD7-4980-8500-DDD34CA15BAE</key>
+		<key>A7991853E736F5EA0380B95020B027479D90C68B</key>
 		<string>https://github.com/EverChan/pa-object.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>pa-app/pa/platforms/ios/pa-dev.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>FB558B5F-3FD7-4980-8500-DDD34CA15BAE</key>
+		<key>A7991853E736F5EA0380B95020B027479D90C68B</key>
 		<string>../../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/EverChan/pa-object.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>FB558B5F-3FD7-4980-8500-DDD34CA15BAE</string>
+	<string>A7991853E736F5EA0380B95020B027479D90C68B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FB558B5F-3FD7-4980-8500-DDD34CA15BAE</string>
+			<string>A7991853E736F5EA0380B95020B027479D90C68B</string>
 			<key>IDESourceControlWCCName</key>
 			<string>pa-object</string>
 		</dict>

@@ -34,10 +34,19 @@ function* processAuth(next) {
     username: user.userid,
     isLogin: true
   };
+
+  console.log('processAuth====');
   yield* next;
 }
 
 function* mockAuth(next) {
+
+    var session = this.session;
+    session.count = session.count || 0;
+    session.count++;
+
+    console.log('mockAuth===='+session.count,session);
+
   this.session.user = mockUser;
   yield* next;
 }

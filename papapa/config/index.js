@@ -34,6 +34,10 @@ var config = module.exports = {
         connectionLimit: 5,
         timeout: 5000,
         multipleStatements: true
+    },
+    redis:{
+        host:'localhost',
+        port:6379
     }
 
 };

@@ -70,6 +70,8 @@ exports.show = function
 exports.create = function
 *()
 {
+
+    console.log('login--create===')
     //session中获取uid
     var uid = this.session.user.uid || 1;
 
@@ -90,7 +92,6 @@ exports.create = function
         isSuccess: 1,
         token: randomToken(16)
     };
-
 
     //创建登陆记录
     var result = yield Login.createLogin(uid, _data);
