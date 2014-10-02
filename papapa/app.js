@@ -43,7 +43,6 @@ app.keys = config.keys;
 app.use(middlewares.favicon());
 app.use(middlewares.rt());
 
-
 var session = require('koa-generic-session');
 var redisStore = require('koa-redis');
 

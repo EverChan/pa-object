@@ -35,15 +35,12 @@ function* processAuth(next) {
     isLogin: true
   };
 
-  console.log('processAuth====');
   yield* next;
 }
 
 function* mockAuth(next) {
 
     var session = this.session;
-    session.count = session.count || 0;
-    session.count++;
 
     console.log('mockAuth===='+session.count,session);
 
