@@ -33,12 +33,21 @@ var test = require('./controllers/test');
 
 
 
+//wechat
+var wechat=require('./controllers/wechat/index');
+
+
+
 
 module.exports = function (app) {
     //首页
     app.get('/', home.index);
     //api 调试页面
     app.get('/test', test.index);
+
+    //wechat
+    app.get('/wechat',wechat.index);
+
 
 //
 //  app.get('/tasklist', taskController.showTaskList);
