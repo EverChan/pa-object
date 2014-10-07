@@ -20,10 +20,6 @@ var parameter = require('./middlewares/parameter');
 
 
 
-
-
-
-
 var app = koa();
 app.keys = config.keys;
 

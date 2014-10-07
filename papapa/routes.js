@@ -43,8 +43,10 @@ module.exports = function (app) {
     //api 调试页面
     app.get('/test', test.index);
 
-    //wechat
+    //wechat controller
     app.get('/wechat',wechat.index);
+    app.post('wechat',wechat.create);
+
 
 
 //
@@ -71,6 +73,7 @@ module.exports = function (app) {
 
     // mount all API requests to API app
     app.use(mount('/api', API));
+
 };
 
 var API = koa();

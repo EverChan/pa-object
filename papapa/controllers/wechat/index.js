@@ -11,15 +11,14 @@ var wechat = require('wechat');
 
 //get /wechat
 exports.index = function *(){
-
+    console.log('wechat:index');
 };
 
 //post /wechat
-exports.create=function *(next){
+exports.create=function *(){
     console.log('post:/wechat');
     var msg=this.req.body;
     console.log(msg);
     this.status = 200;
     this.body=msg||{};
-    yield next;
 };
