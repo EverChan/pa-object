@@ -12,10 +12,10 @@ var token='wechat_token';
 
 exports.index = function* () {
 
-    wechat(token,function(req,res,next){
-        res.reply('Hello world!');
-        console.log('wwechat===reply');
-    });
+//    wechat(token,function(req,res,next){
+//        res.reply('Hello world!');
+//        console.log('wwechat===reply');
+//    });
 
     this.body= yield (wechat(token,function(req,res,next){
         res.reply('Hello world!');
