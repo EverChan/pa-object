@@ -28,7 +28,7 @@ module.exports = function (path,token) {
                 wechat({ token: token||weChatToken,checksig:!query.checksig});
             }
         }
-        
+
         yield next;
 
         //yield next;//input过程的处理结束，继续执行其他的中间件

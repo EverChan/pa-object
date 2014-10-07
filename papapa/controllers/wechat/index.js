@@ -17,7 +17,7 @@ exports.index = function *(){
 //post /wechat
 exports.create=function *(){
     console.log('post:/wechat');
-    var msg=this.req.body;
+    var msg=this.body;
     console.log(msg);
     this.status = 200;
     this.body=msg||{};
