@@ -10,7 +10,7 @@ var wechat = require('wechat');
 
 var token='wechat_token';
 
-exports.index = function* () {
+exports.index = function() {
 
     wechat(token,function(req,res,next){
         res.reply('Hello world!');
