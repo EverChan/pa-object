@@ -10,13 +10,13 @@ var wechat = require('wechat');
 
 
 //get /wechat
-exports.index = function *()
-{
+exports.index = function *(){
 
 };
 
 //post /wechat
 exports.create=function *(){
+    console.log('post:/wechat');
     var msg=this.req.body;
     console.log(msg);
     this.status = 200;
