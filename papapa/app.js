@@ -19,6 +19,11 @@ var middlewares = require('koa-middlewares');
 var parameter = require('./middlewares/parameter');
 
 
+
+
+
+
+
 var app = koa();
 app.keys = config.keys;
 
@@ -85,18 +90,9 @@ app.use(middlewares.bodyparser());
 app.use(auth());
 
 
-
-//初始化 koa-wechat 中间件
-var wechat = require('koa-wechat'),
-    weChatToken = 'wechat_token';
-app.use(function *(next){
-    var path=this.path.split('/')[1];
-    if(path=='wechat'){
-      yield wechat({ token: weChatToken});
-    }
-    yield next;
-
-});
+//wechat中间件加载
+var wechatmiddlewares = require('./middlewares/wechat-middlewares');
+//app.use(wechatmiddlewares('/wechat'));
 app.use(session({ store: redisStore('webot:session:')}));
 
 
