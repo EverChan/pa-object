@@ -37,8 +37,6 @@ var test = require('./controllers/test');
 var wechat=require('./controllers/wechat/index');
 
 
-
-
 module.exports = function (app) {
     //首页
     app.get('/', home.index);
