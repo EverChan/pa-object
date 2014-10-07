@@ -15,25 +15,25 @@ var Webot = require('weixin-robot');
 module.exports = function (path,token) {
     var weChatToken = 'wechat_token';
 
+    //初始化回复机器人
+    var webot=getWebot();
+    console.log(webot,'===1www');
+
     return function *(next){
         var pathName=this.path;
 
+        this.webot=webot;
+
         if(path && pathName.indexOf(path)==0){
             console.log('wechat:path');
-
-            //初始化机器人
-            var media_id = pathName.split('/')[1];
-
-            var webot = getWebot(media_id);
-
-            console.log(webot,'===111');
-
-            this.webot = webot;
-            this.wx_token = webot.wx_token;
-
             yield wechat({ token: token||weChatToken});
         }
+
+        //input过程的处理结束，继续执行其他的中间件
         yield next;
+
+       //outinput
+       //...
     }
 };
 
