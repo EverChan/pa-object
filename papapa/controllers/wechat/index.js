@@ -24,5 +24,10 @@ exports.index = function *(next)
     }
     this.webot = webot;
     this.wx_token = webot.wx_token;
+
+    var info = this.req.body;
+    info.session = this.session;
+    this.body = yield this.webot.reply(info);
+
     yield next;
 };
