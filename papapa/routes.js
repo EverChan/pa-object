@@ -15,6 +15,8 @@ var ResourceRouter = middlewares.ResourceRouter;
 var home = require('./controllers/home');
 var test = require('./controllers/test');
 
+var wechat=require('./controllers/wechat/index');
+
 
 //var taskController = require('./controllers/task');
 //var taskApi = require('./controllers/api/task');
@@ -33,8 +35,6 @@ var test = require('./controllers/test');
 
 
 
-//wechat
-var wechat=require('./controllers/wechat/index');
 
 
 module.exports = function (app) {
@@ -43,11 +43,14 @@ module.exports = function (app) {
     //api 调试页面
     app.get('/test', test.index);
 
+//    app.get('/wechat',wechat.index);
+
     //wechat controller
-    app.get('/wechat',wechat.index);
-    app.post('wechat',wechat.create);
-
-
+    var wechatRounter=new ResourceRouter('wechat', {
+        'index':wechat.index,
+        'create':wechat.create
+    });
+    app.use(wechatRounter.middleware());
 
 //
 //  app.get('/tasklist', taskController.showTaskList);
@@ -68,7 +71,6 @@ module.exports = function (app) {
 //  app.get('/alibenchcreate', alibenchController.showAlibenchCreate);
 //  app.get('/alibenchlist', alibenchController.showAlibenchTasklist);
 //  app.get('/alibenchresult', alibenchController.showAlibenchResult);
-
 
 
     // mount all API requests to API app

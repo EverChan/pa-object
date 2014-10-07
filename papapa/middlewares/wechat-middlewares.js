@@ -20,8 +20,8 @@ module.exports = function (path,token) {
         var query=this.query;
 
 
-        if(path && pathName.indexOf(path)==0){
-            console.log('wechat:path');
+        if(path && pathName.indexOf(path)===0){
+            console.log('wechat:path:'+this.method);
             yield wechat({ token: token||weChatToken,checksig:!query.checksig});
         }
 
