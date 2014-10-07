@@ -9,14 +9,16 @@ var debug = require('debug')('maoxu-web:controllers:wechat');
 var wechat = require('wechat');
 
 
-//get
+//get /wechat
 exports.index = function *()
 {
 
 };
 
-//post
+//post /wechat
 exports.create=function *(){
     var msg=this.req.body;
     console.log(msg);
+    this.status = 200;
+    this.body=msg||{};
 };
