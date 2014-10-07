@@ -22,9 +22,6 @@ var parameter = require('./middlewares/parameter');
 var app = koa();
 app.keys = config.keys;
 
-var bodyParser = require('koa-body-parser');
-app.use(bodyParser());
-
 //app.use(taobaostatus({
 //  statusFile: path.join(__dirname, 'static', 'status.taobao'),
 //  checkAvailable: function* () {

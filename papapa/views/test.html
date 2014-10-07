@@ -41,6 +41,7 @@
                             <option value="post">post</option>
                             <option value="put">put</option>
                             <option value="delete">delete</option>
+                            <option value="xml">xml</option>
                         </select>
                     </label>
                 </p>
@@ -84,15 +85,26 @@
             var url = uri.toString();
             console.log(url);
 
-            var ajax = new IO({
-                type: type.value,
-                url: url,
-                data: data,
-                success: function (d) {
-                    DOM.html(showArea, JSON.stringify(d));
-                }
-            });
-
+            if(type.value=='xml'){
+                var ajax = new IO({
+                    type: "post",
+                    url: url,
+                    data: {body:param.value},
+                    dataType: "text/xml",
+                    success: function (d) {
+                        DOM.html(showArea, JSON.stringify(d));
+                    }
+                });
+            }else{
+                var ajax = new IO({
+                    type: type.value,
+                    url: url,
+                    data: data,
+                    success: function (d) {
+                        DOM.html(showArea, JSON.stringify(d));
+                    }
+                });
+            }
         });
 
     });

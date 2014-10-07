@@ -25,22 +25,11 @@ module.exports = function (path,token) {
 
         if(path && pathName.indexOf(path)===0){
             console.log('wechat:path:'+method);
-           if(method==='GET'){
-               yield wechat({
-                   token: token||weChatToken,
-                   checksig:!query.checksig,
-                   session:this.session
-               });
-           }else{
-               wechat({
-                   token: token||weChatToken,
-                   checksig:!query.checksig,
-                   session:this.session
-               });
-               yield next;//input过程的处理结束，继续执行其他的中间件
-                //outinput
-                //...
-           }
+            yield wechat({
+               token: token||weChatToken,
+               checksig:!query.checksig,
+               session:this.session
+            });
         }else{
             yield next;
         }
