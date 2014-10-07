@@ -8,9 +8,6 @@ var debug = require('debug')('maoxu-web:controllers:wechat');
 
 var koaWechat = require('koa-wechat');
 
-var webot = require('weixin-robot');
-
-var token = 'wechat_token';
 
 exports.index = function ()
 {
@@ -22,12 +19,12 @@ exports.index = function ()
 //    if (!webot) {
 //        this.throw(404);
 //    }
-    this.webot = webot;
-    this.wx_token = webot.wx_token;
+//    this.webot = webot;
+//    this.wx_token = webot.wx_token;
 
     var info = this.req.body;
     console.log(this.session,'===',info);
 //    info.session = this.session;
-    this.body = this.webot.reply(info);
+    this.body = this.webot.reply(info||{});
 
 };

@@ -41,7 +41,7 @@ function* processAuth(next) {
 function* mockAuth(next) {
 
     var session = this.session;
-
+    session.count++;
     console.log('mockAuth===='+session.count,session);
 
   this.session.user = mockUser;

@@ -47,18 +47,18 @@ var session = require('koa-generic-session');
 var redisStore = require('koa-redis');
 
 //redis 缓存数据库
-var redis = require('redis');
-var client = redis.createClient(config.redis.port, config.redis.host);
+//var redis = require('redis');
+//var client = redis.createClient(config.redis.port, config.redis.host);
+//
+//client.on("error", function (error) {
+//    console.log('redis error:', error);
+//});
 
-client.on("error", function (error) {
-    console.log('redis error:', error);
-});
-
-app.use(session({
-    store: redisStore({
-        client: client
-    })
-}));
+//app.use(session({
+//    store: redisStore({
+//        client: client
+//    })
+//}));
 
 
 //跨域中间件
@@ -92,8 +92,9 @@ app.use(auth());
 
 //wechat中间件加载
 var wechatmiddlewares = require('./middlewares/wechat-middlewares');
-//app.use(wechatmiddlewares('/wechat'));
+app.use(wechatmiddlewares('/wechat'));
 app.use(session({ store: redisStore('webot:session:')}));
+
 
 
 // swig render，页面渲染===
