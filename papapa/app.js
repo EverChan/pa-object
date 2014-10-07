@@ -22,8 +22,6 @@ var parameter = require('./middlewares/parameter');
 
 
 
-
-
 var app = koa();
 app.keys = config.keys;
 
@@ -88,7 +86,6 @@ app.use(middlewares.bodyparser());
 
 //用户信息验证 （基于 buc 的）
 app.use(auth());
-
 
 
 // swig render，页面渲染===

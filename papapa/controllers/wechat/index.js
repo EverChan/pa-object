@@ -8,7 +8,14 @@ var debug = require('debug')('maoxu-web:controllers:wechat');
 
 var wechat = require('wechat');
 
-exports.index = function* () {
-  this.body='wechat/index';
+var token='wechat_token';
 
+exports.index = function* () {
+
+    wechat(token,function(req,res,next){
+        res.reply('Hello world!');
+        console.log('wwechat===reply');
+    });
+
+    //this.body='wechat/index';
 };
