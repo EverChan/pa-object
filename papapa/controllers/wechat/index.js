@@ -26,7 +26,8 @@ exports.index = function ()
     this.wx_token = webot.wx_token;
 
     var info = this.req.body;
-    info.session = this.session;
+    console.log(this.session,'===',info);
+//    info.session = this.session;
     this.body = this.webot.reply(info);
 
 };
