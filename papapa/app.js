@@ -87,9 +87,11 @@ app.use(auth());
 
 
 //wechat中间件加载
-var wechatmiddlewares = require('./middlewares/wechat-middlewares');
-app.use(wechatmiddlewares('/wechat'));
-app.use(session({ store: redisStore('webot:session:') }))
+//var wechatmiddlewares = require('./middlewares/wechat-middlewares');
+//app.use(wechatmiddlewares('/wechat'));
+//app.use(session({ store: redisStore('webot:session:') }))
+var wechat = require('koa-wechat');
+app.use(wechat({ token: 'wechat_token' }));
 
 
 // swig render，页面渲染===
