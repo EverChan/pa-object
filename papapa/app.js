@@ -1,5 +1,3 @@
-
-
 'use strict';
 
 /**
@@ -19,7 +17,6 @@ var auth = require('./middlewares/auth');
 var csrf = require('./middlewares/csrf');
 var middlewares = require('koa-middlewares');
 var parameter = require('./middlewares/parameter');
-
 
 
 var app = koa();
@@ -45,16 +42,16 @@ var session = require('koa-generic-session');
 var redisStore = require('koa-redis');
 
 //redis 缓存数据库
-var redis   = require('redis');
-var client  = redis.createClient(config.redis.port,config.redis.host);
+var redis = require('redis');
+var client = redis.createClient(config.redis.port, config.redis.host);
 
-client.on("error",function(error){
-    console.log('redis error:',error);
+client.on("error", function (error) {
+    console.log('redis error:', error);
 });
 
 app.use(session({
     store: redisStore({
-        client:client
+        client: client
     })
 }));
 
@@ -65,15 +62,15 @@ app.use(cors());
 
 //静态资源
 app.use(middlewares.staticCache({
-  dir: 'static',
-  prefix: '/static',
-  maxAge: ms('1y'),
-  buffer: config.debug,
-  gzip: config.debug
+    dir: 'static',
+    prefix: '/static',
+    maxAge: ms('1y'),
+    buffer: config.debug,
+    gzip: config.debug
 }));
 
 if (config.debug && process.env.NODE_ENV !== 'test') {
-  app.use(middlewares.logger());
+    app.use(middlewares.logger());
 }
 
 // use cookie session
@@ -88,12 +85,27 @@ app.use(middlewares.bodyparser());
 app.use(auth());
 
 
+
+//初始化 koa-wechat 中间件
+var wechat = require('koa-wechat'),
+    weChatToken = 'wechat_token';
+app.use(function *(next){
+    var path=this.path.split('/')[1];
+    if(path=='wechat'){
+      yield wechat({ token: weChatToken});
+    }
+    yield next;
+
+});
+app.use(session({ store: redisStore('webot:session:')}));
+
+
 // swig render，页面渲染===
 swig(app, {
-  root: path.join(__dirname, 'views'),
-  autoescape: true,
-  cache: config.debug ? false : 'memory', // disable, set to false
-  ext: 'html'
+    root: path.join(__dirname, 'views'),
+    autoescape: true,
+    cache: config.debug ? false : 'memory', // disable, set to false
+    ext: 'html'
 });
 
 // 参数验证, this.verifyParams(rule);
@@ -109,9 +121,9 @@ middlewares.onerror(app);
 
 // error logger handler
 app.on('error', function (err) {
-  if (process.env.NODE_ENV !== 'test') {
-    logger.error(err);
-  }
+    if (process.env.NODE_ENV !== 'test') {
+        logger.error(err);
+    }
 });
 
 module.exports = http.createServer(app.callback());

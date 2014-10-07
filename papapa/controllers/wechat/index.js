@@ -6,19 +6,23 @@
 
 var debug = require('debug')('maoxu-web:controllers:wechat');
 
-var wechat = require('wechat');
+var koaWechat = require('koa-wechat');
 
-var token='wechat_token';
+var Webot = require('weixin-robot');
 
-exports.index = function* () {
+var token = 'wechat_token';
 
-//    wechat(token,function(req,res,next){
-//        res.reply('Hello world!');
-//        console.log('wwechat===reply');
-//    });
-
-    this.body= yield (wechat(token,function(req,res,next){
-        res.reply('Hello world!');
-        console.log('wwechat===reply');
-    }));
+exports.index = function *(next)
+{
+    var media_id = this.path.split('/')[1];
+    if (!media_id) {
+        this.throw(404);
+    }
+    var webot = yield* Webot.get(media_id);
+    if (!webot) {
+        this.throw(404);
+    }
+    this.webot = webot;
+    this.wx_token = webot.wx_token;
+    yield next;
 };
