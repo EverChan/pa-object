@@ -43,14 +43,11 @@ module.exports = function (app) {
     //api 调试页面
     app.get('/test', test.index);
 
-//    app.get('/wechat',wechat.index);
-
     //wechat controller
-    var wechatRounter=new ResourceRouter('/wechat', {
-        'index':wechat.index,
-        'create':wechat.create
-    });
-    app.use(wechatRounter.middleware());
+    app.get('/wechat',wechat.index);
+    app.post('/wechat',wechat.create);
+
+
 
 //
 //  app.get('/tasklist', taskController.showTaskList);
