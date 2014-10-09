@@ -15,7 +15,7 @@ module.exports = function () {
         var query = this.query||{},
             path=this.path,
             method = this.method;
-        console.log('wechat:path:' + method);
+        console.log('wechat:path:' + method,path);
 
        if(path.indexOf('/wechat')==0){
            yield mount('/wechat', wechat({
