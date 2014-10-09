@@ -46,7 +46,7 @@ module.exports = function (app) {
 //    app.get('/wechat',wechat.index);
 
     //wechat controller
-    var wechatRounter=new ResourceRouter('wechat', {
+    var wechatRounter=new ResourceRouter('/wechat', {
         'index':wechat.index,
         'create':wechat.create
     });

@@ -73,6 +73,12 @@ if (config.debug && process.env.NODE_ENV !== 'test') {
     app.use(middlewares.logger());
 }
 
+
+//wechat中间件加载
+var wechatmiddlewares = require('./middlewares/wechat-middlewares');
+
+app.use(wechatmiddlewares(app));
+
 // use cookie session
 app.use(middlewares.cookieSession());
 // body parser
@@ -83,12 +89,6 @@ app.use(middlewares.bodyparser());
 
 //用户信息验证 （基于 buc 的）
 app.use(auth());
-
-
-//wechat中间件加载
-var wechatmiddlewares = require('./middlewares/wechat-middlewares');
-app.use(wechatmiddlewares('/wechat'));
-//app.use(session({ store: redisStore('webot:session:') }))
 
 
 
