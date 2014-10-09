@@ -24,6 +24,7 @@ module.exports = function () {
                session: this.session
            }));
        }else{
+           console.log('path:'+path);
            yield next;
        }
 
