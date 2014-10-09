@@ -17,7 +17,7 @@ exports.index = function *(){
 //post /wechat
 exports.create=function *(){
     console.log('wechat:create');
-    var param=this.request.body,
+    var param=this.req.body,
         query=this.query;
     console.log(param);
     this.status = 200;
