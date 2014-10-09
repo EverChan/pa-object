@@ -21,5 +21,5 @@ exports.create=function *(){
         query=this.query;
     console.log(param);
     this.status = 200;
-    this.body=param||{};
+//    this.req.body=param||{};
 };
