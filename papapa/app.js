@@ -17,7 +17,7 @@ var auth = require('./middlewares/auth');
 var csrf = require('./middlewares/csrf');
 var middlewares = require('koa-middlewares');
 var parameter = require('./middlewares/parameter');
-
+var mount = require('koa-mount');
 
 var app = koa();
 app.keys = config.keys;
@@ -76,8 +76,8 @@ if (config.debug && process.env.NODE_ENV !== 'test') {
 
 //wechat中间件加载
 var wechatmiddlewares = require('./middlewares/wechat-middlewares');
+app.use(mount('/wechat',wechatmiddlewares()));
 
-app.use(wechatmiddlewares(app));
 
 // use cookie session
 app.use(middlewares.cookieSession());
