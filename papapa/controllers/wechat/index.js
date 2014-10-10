@@ -27,7 +27,7 @@ exports.create=function *(){
 //    this.req.body=param||{};
 
     //设置相应的数据
-    this.res.body={
+    this.body={
         msgType: 'text',
         content: "你好："+raw.ToUserName
     };
