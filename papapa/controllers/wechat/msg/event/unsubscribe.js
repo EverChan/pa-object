@@ -10,7 +10,7 @@ var wechat = require('wechat');
 
 
 //get /wechat
-exports.msgRes=function* (req,raw){
+exports.resMsg=function* (req,raw){
     var res={
         msgType: 'text',
         content: "谢谢光临，" + raw.ToUserName
