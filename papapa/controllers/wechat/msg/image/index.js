@@ -11,11 +11,12 @@ var wechat = require('wechat');
 
 //get /wechat
 exports.resMsg=function* (req,raw){
+    var param=req.param;
     var res={
         msgType: 'image',
         content: "你好，" + raw.ToUserName+'。你的消息已收到：'+raw.Content,
-//        picUrl:raw.PicUrl,
-        media_id:raw.MediaId
+        picUrl:param.picUrl,
+        mediaId:param.mediaId
     };
 
     return yield res;
