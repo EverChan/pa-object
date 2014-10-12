@@ -13,7 +13,7 @@ var wechat = require('wechat');
 exports.resMsg=function* (req,raw){
     var res={
         msgType: 'text',
-        content: "欢迎订阅，" + raw.ToUserName
+        content: "欢迎关注我们，" + raw.ToUserName
     };
 
    return yield res;

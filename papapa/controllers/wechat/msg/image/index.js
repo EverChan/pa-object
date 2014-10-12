@@ -15,6 +15,7 @@ exports.resMsg=function* (req,raw){
         msgType: 'image',
         content: "你好，" + raw.ToUserName+'。你的消息已收到：'+raw.Content,
         picUrl:raw.PicUrl
+//        media_id:raw.MediaId
     };
 
     return yield res;
