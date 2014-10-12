@@ -48,6 +48,9 @@ var client = redis.createClient(config.redis.port, config.redis.host);
 client.on("error", function (error) {
     console.log('redis error:', error);
 });
+client.on("ready", function () {
+    console.log('[%s] [worker:%s] redis ready', Date(), process.pid);
+});
 
 app.use(session({
     store: redisStore({
