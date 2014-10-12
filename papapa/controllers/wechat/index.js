@@ -35,14 +35,14 @@ exports.create = function * ()
     if(msgType)requirePath.push(msgType);
     if(event)requirePath.push(event);
 
-    var msgRes=require(requirePath.join("/"));
 
-    if(msgRes){
+    try{
+        var msgRes=require(requirePath.join("/"));
         this.body=yield msgRes.resMsg(req,raw);
-    }else{
-       this.body = {
+    }catch (e){
+        this.body = {
             msgType: 'text',
-            content: "你好，" + raw.ToUserName
+            content: "系统错误：" + e
         };
     }
 
