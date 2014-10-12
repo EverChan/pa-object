@@ -13,7 +13,7 @@ var wechat = require('wechat');
 exports.resMsg=function* (req,raw){
     var res={
         msgType: 'text',
-        content: "你好，" + raw.ToUserName
+        content: "你好，" + raw.ToUserName+'。你的消息已收到：'+raw.Content
     };
 
     return yield res;
