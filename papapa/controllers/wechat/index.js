@@ -31,7 +31,7 @@ exports.create = function * ()
     //消息类型处理
     var msgType = raw.MsgType,
         event=raw.Event;
-    var requirePath=['./controllers/wechat/msg'];
+    var requirePath=['./msg'];
     if(msgType)requirePath.push(msgType);
     if(event)requirePath.push(event);
 
