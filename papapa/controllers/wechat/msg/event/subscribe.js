@@ -16,5 +16,5 @@ exports.resMsg=function* (req,raw){
         content: "欢迎订阅，" + raw.ToUserName
     };
 
-    yield res;
+   return yield res;
 }

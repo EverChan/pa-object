@@ -16,5 +16,5 @@ exports.resMsg=function* (req,raw){
         content: "你好，" + raw.ToUserName
     };
 
-    yield res;
+    return yield res;
 }
