@@ -17,9 +17,9 @@ exports.resMsg=function* (req,raw){
 
     //如果是新闻关键字，回复新闻===
     if(content=='news'){
-        yield newsMsg.resMsg(req,raw);
+       return yield newsMsg.resMsg(req,raw);
     }
-
+    
     var res={
         msgType: 'text',
         content: "你好，" + raw.ToUserName+'。你的消息已收到：'+raw.Content
