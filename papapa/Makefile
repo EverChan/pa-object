@@ -24,5 +24,5 @@ run:
    @nohup node —-harmony app.js &
 
 
-kill
+kill:
   @killall node
