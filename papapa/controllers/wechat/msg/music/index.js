@@ -16,7 +16,7 @@ exports.resMsg=function* (req,raw){
         msgType: 'music',
         content: {
             title:"你好，" + raw.ToUserName+'。你的音乐已收到：'+raw.Content,
-//            picUrl:param.picUrl,
+//          picUrl:param.picUrl,
             thumbMediaId:param.mediaId
         }
     };

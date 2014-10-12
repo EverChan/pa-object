@@ -19,7 +19,7 @@ exports.resMsg=function* (req,raw){
     if(content=='news'){
        return yield newsMsg.resMsg(req,raw);
     }
-    
+
     var res={
         msgType: 'text',
         content: "你好，" + raw.ToUserName+'。你的消息已收到：'+raw.Content
