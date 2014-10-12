@@ -14,9 +14,11 @@ exports.resMsg=function* (req,raw){
     var param=req.param;
     var res={
         msgType: 'image',
-        content: "你好，" + raw.ToUserName+'。你的消息已收到：'+raw.Content,
-        picUrl:param.picUrl,
-        mediaId:param.mediaId
+        content: {
+            title:"你好，" + raw.ToUserName+'。你的消息已收到：'+raw.Content,
+            picUrl:param.picUrl,
+            mediaId:param.mediaId
+        }
     };
 
     return yield res;
