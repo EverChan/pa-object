@@ -40,6 +40,7 @@ exports.create = function * ()
         var msgRes=require(requirePath.join("/"));
         this.body=yield msgRes.resMsg(req,raw);
     }catch (e){
+        console.log(e);
         this.body = {
             msgType: 'text',
             content: "系统错误：" + e
