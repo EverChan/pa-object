@@ -1,0 +1,80 @@
+/*=list=*/
+.list-bd .list-item{
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+.list-bd dl {
+    position: relative;
+    padding: 10px 11px;
+    color: #aaa;
+}
+
+.list-bd dl .new-icon {
+    left: 50px;
+    top: 5px;
+}
+
+.list-bd dt img {
+    width: 44px;
+}
+
+.list-bd dd {
+    margin: 0 6px;
+    font-size: 12px;
+    font-family: "Helvetica Neue";
+    font-weight: 200;
+    line-height: 1.2em;
+}
+
+.list-bd dd p {
+    width: 0;
+    height: 30px;
+    overflow: hidden;
+}
+
+.list-bd dd.pa-1 p {
+    width: 30px;
+}
+
+.list-bd dd.pa-2 p {
+    width: 60px;
+}
+
+.list-bd dd.pa-3 p {
+    width: 90px;
+}
+
+.list-bd .f-left {
+    float: left;
+}
+
+.list-bd .f-left dt {
+    float: left;
+}
+
+.list-bd .f-left dd {
+    float: left;
+}
+
+.list-bd .f-left dd p {
+    background: url(images/icon-l-pa.png) repeat-x;
+    background-size: 30px 30px;
+}
+
+.list-bd .f-right {
+    float: right;
+}
+
+.list-bd .f-right dt {
+    float: right
+}
+
+.list-bd .f-right dd {
+    float: right;
+    text-align: right;
+}
+
+.list-bd .f-right dd p {
+    background: url(images/icon-r-pa.png) repeat-x;
+    background-size: 30px 30px;
+}

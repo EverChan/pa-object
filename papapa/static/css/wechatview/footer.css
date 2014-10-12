@@ -1,0 +1,85 @@
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 64px;
+    overflow: hidden;
+}
+
+#footer dl {
+    position: relative;
+    padding: 10px 11px;
+    color: #aaa;
+}
+
+#footer dl .new-icon {
+    left: 50px;
+    top: 5px;
+}
+
+#footer dt img {
+    width: 44px;
+}
+
+#footer dd {
+    margin: 0 6px;
+    font-size: 12px;
+    font-family: "Helvetica Neue";
+    font-weight: 200;
+    line-height: 1.2em;
+}
+
+#footer dd p {
+    width: 0;
+    height: 30px;
+    overflow: hidden;
+}
+
+#footer dd.pa-1 p {
+    width: 30px;
+}
+
+#footer dd.pa-2 p {
+    width: 60px;
+}
+
+#footer dd.pa-3 p {
+    width: 90px;
+}
+
+#footer .f-left {
+    float: left;
+}
+
+#footer .f-left dt {
+    float: left;
+}
+
+#footer .f-left dd {
+    float: left;
+}
+
+#footer .f-left dd p {
+    background: url(images/icon-l-pa.png) repeat-x;
+    background-size: 30px 30px;
+}
+
+#footer .f-right {
+    float: right;
+}
+
+#footer .f-right dt {
+    float: right
+}
+
+#footer .f-right dd {
+    float: right;
+    text-align: right;
+}
+
+#footer .f-right dd p {
+    background: url(images/icon-r-pa.png) repeat-x;
+    background-size: 30px 30px;
+}
