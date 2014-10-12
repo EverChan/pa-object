@@ -17,7 +17,8 @@ exports.resMsg=function* (req,raw){
         content: {
             title:"你好，" + raw.ToUserName+'。你的视频已收到：'+raw.Content,
 //            picUrl:param.picUrl,
-            thumbMediaId:param.thumbMediaId,
+            mediaId:param.mediaId,
+            thumbMediaId:param.thumbMediaId
         }
     };
 

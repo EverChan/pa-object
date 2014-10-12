@@ -11,7 +11,6 @@ var wechat = require('wechat');
 //经纬度计算
 var where=require("where");
 
-
 //get /wechat
 exports.resMsg=function* (req,raw){
     var param=req.param;
