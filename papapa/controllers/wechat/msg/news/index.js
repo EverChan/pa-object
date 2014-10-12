@@ -15,12 +15,12 @@ exports.resMsg=function* (req,raw){
 
     var newsList=[{
         title: '新闻1',
-        url: 'http://',
-        picUrl: ''
+        url: 'http://121.40.76.237/wechatview/',
+        picUrl: 'http://localhost:3000/static/images/logo2.jpg'
     }, {
         title: '新闻2',
-        url: 'http://...',
-        picUrl: 'http://...'
+        url: 'http://121.40.76.237/wechatview/',
+        picUrl: 'http://localhost:3000/static/images/1.jpg'
     }];
 
     var res={
