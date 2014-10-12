@@ -29,13 +29,16 @@ exports.create = function * ()
     //  this.req.body=param||{};
 
     //消息类型处理
-    var type = req.type,
-        msgType=raw.MsgType;
+    var msgType = raw.MsgType,
+        event=raw.Event;
+    var requirePath=['./controllers/wechat/msg'];
+    if(msgType)requirePath.push(msgType);
+    if(event)requirePath.push(event);
 
-    var msgRes=require('./controllers/wechat/msg'+[type,msgType].join("/"));
+    var msgRes=require(requirePath.join("/"));
 
     if(msgRes){
-        this.body=msgRes.resMsg();
+        this.body=yield msgRes.resMsg(req,raw);
     }else{
        this.body = {
             msgType: 'text',
