@@ -68,7 +68,7 @@ exports.selectByOpenId = function * (openid)
         return null;
     }
 
-    return yield mysql.query(SELECT_BY_OPENID, [args, _openid]);
+    return yield mysql.query(SELECT_BY_OPENID, [_openid]);
 };
 
 
