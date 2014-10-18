@@ -8,7 +8,7 @@ var debug = require('debug')('maoxu-web:controllers:subscribe');
 
 var wechat = require('wechat');
 
-var Users = require('../../models/wechat_users');
+var Users = require('../../../../models/wechat_users');
 
 
 //get /wechat
