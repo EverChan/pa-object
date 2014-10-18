@@ -41,12 +41,10 @@ exports.index = function
         isSuccess: 1,
         data: resList
     };
-}
-;
+};
 
 // GET /api/users:uid
-exports.show = function
-*()
+exports.show = function *()
 {
     this.verifyParams(rules.id);
 

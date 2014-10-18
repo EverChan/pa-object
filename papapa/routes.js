@@ -14,6 +14,7 @@ var ResourceRouter = middlewares.ResourceRouter;
 
 var home = require('./controllers/home');
 var test = require('./controllers/test');
+var wechattest = require('./controllers/wechattest');
 
 
 var wechatview = require('./controllers/wechatview');
@@ -45,6 +46,9 @@ module.exports = function (app) {
     app.get('/', home.index);
     //api 调试页面
     app.get('/test', test.index);
+    app.get('/wechattest', wechattest.index);
+
+
     app.get('/wechatview', wechatview.index);
 
     //wechat controller

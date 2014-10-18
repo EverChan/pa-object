@@ -19,7 +19,9 @@ exports.index = function * ()
 exports.create = function * ()
 {
     console.log('wechat:create');
-    var req = this.req.body,//https://github.com/node-webot/weixin-robot 数据格式
+    console.log(this.req.body);
+
+    var req = this.req.body||this.request.body,//https://github.com/node-webot/weixin-robot 数据格式
         raw = req.raw,
         query = this.query;
     console.log(req);
@@ -34,7 +36,6 @@ exports.create = function * ()
     var requirePath=['./msg'];
     if(msgType)requirePath.push(msgType);
     if(event)requirePath.push(event);
-
 
     try{
         var msgRes=require(requirePath.join("/"));
