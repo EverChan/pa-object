@@ -1,0 +1,9 @@
+module.js:333
+    throw err;
+          ^
+Error: Cannot find module '/Users/ghy/git/pa-object/papapa/—-harmony'
+    at Function.Module._resolveFilename (module.js:331:15)
+    at Function.Module._load (module.js:273:25)
+    at Function.Module.runMain (module.js:490:10)
+    at startup (node.js:124:16)
+    at node.js:803:3
