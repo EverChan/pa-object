@@ -84,3 +84,9 @@
     font-size: 10px;
     color: #aaa;
 }
+
+.list-bd .item-name .name-ipt{
+    border: 0 none;
+    color: #555;
+    font-size: 13px;
+}

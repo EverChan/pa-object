@@ -12,12 +12,13 @@
                     <div class="list-item" data-openid="{{item.openid}}">
                         <dl class="f-left">
                             <dt class="j_cardWatch" data-uid="2">
-                                <img src="{{item.pic}}" alt="{{item.openid}}">
-                                <b class="new-icon"></b>
+                                <a href="{{item.pic}}">
+                                    <img src="{{item.pic}}" alt="{{item.openid}}"/>
+                                </a>
                             </dt>
                             <dd class="desc">
                                 <p class="item-name">
-                                    {{item.openid}}
+                                    <input value="{{item.openid}}" readonly class="name-ipt"/>
                                 </p>
                                 <p>
                                    <span class="{% if item.sex =='man' %}sex-m{% else %}sex-w{% endif %}">
