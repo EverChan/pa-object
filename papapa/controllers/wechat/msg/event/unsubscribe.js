@@ -8,6 +8,7 @@ var debug = require('debug')('maoxu-web:controllers:wechat');
 
 var wechat = require('wechat');
 
+var Users = require('../../../../models/wechat_users');
 
 //get /wechat
 exports.resMsg=function* (req,raw){
