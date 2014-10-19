@@ -27,7 +27,11 @@ exports.resMsg=function* (req,raw){
 
     var user=yield Users.selectByOpenId(openid);
     if(user.length){
-        yield Users.updateByOpenId(openid,{'subscribe':'1'});
+        yield Users.updateByOpenId(openid,
+            {
+                'subscribe':'1',
+                'updatetime': new Date()
+            });
         console.log('老用户');
     }else{
 
