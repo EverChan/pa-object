@@ -39,9 +39,9 @@ var config = module.exports = {
         port: 6379
     },
     downloadPath: {
-        images: path.join(path.dirname(__dirname), 'static','res','images'),
-        voice: path.join(path.dirname(__dirname), 'static','res','voice'),
-        video: path.join(path.dirname(__dirname), 'static','res','video')
+        images: path.join(path.dirname(__dirname),'resfiles','images'),
+        voice: path.join(path.dirname(__dirname),'resfiles','voice'),
+        video: path.join(path.dirname(__dirname),'resfiles','video')
     }
 
 };

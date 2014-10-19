@@ -80,7 +80,7 @@ exports.downloadFile = function (url, type, suffix) {
             console.log('File downloaded at: ' + result.file);
         }
     });
-    var urlPath = "http://121.40.76.237/static/res/images/";
+    var urlPath = "http://121.40.76.237/resfiles/"+type+"/";
     return {
         name: fileName,
         type: _type,
