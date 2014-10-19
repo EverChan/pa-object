@@ -41,7 +41,7 @@ exports.resMsg=function* (req,raw,openid){
 
     //帮助
     if(content=='h'){
-        reContent=['帮助说明：','h --回复帮助文档','pa --设置在线','更换头像：请在对话模式下发送图片'];
+        reContent=['帮助说明：','h --回复帮助文档','papapa --设置在线','更换头像：请在对话模式下发送图片'];
     }
 
 
