@@ -30,7 +30,7 @@ exports.resMsg = function * (req, raw)
         }
     };
 
-    var fileData = Utils.downloadFile(remoteurl, 'images');
+    var fileData = Utils.downloadFile(remoteUrl, 'images');
 
     var url = fileData.urlPath + fileData.name + "." + fileData.suffix;
 

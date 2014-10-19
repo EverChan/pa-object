@@ -31,8 +31,8 @@ exports.resMsg=function* (req,raw){
         console.log('老用户');
     }else{
 
-        var remoteurl="http://121.40.76.237/static/images/1.jpg";
-        var fileData=Utils.downloadFile(remoteurl,'images');
+        var remoteUrl="http://121.40.76.237/static/images/1.jpg";
+        var fileData=Utils.downloadFile(remoteUrl,'images');
 
         var url=fileData.urlPath+fileData.name+"."+fileData.suffix;
 
