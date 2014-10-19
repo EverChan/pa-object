@@ -38,6 +38,7 @@ exports.resMsg = function * (req, raw,openid)
         openid: openid,
         path: fileData.path,
         url: url,
+        type:fileData.type,
         name: fileData.name,
         suffix: fileData.suffix
     });
