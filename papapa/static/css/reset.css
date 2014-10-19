@@ -1,0 +1,181 @@
+/* reset */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+
+
+html {
+    font-family: "microsoft yahei",arial,sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    line-height: 1.2;
+}
+
+nav ul {
+    list-style: none;
+}
+
+a:active {
+    outline: 0;
+}
+
+button[disabled], html input[disabled] {
+    cursor: default;
+}
+
+img {
+    vertical-align: middle;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+}
+
+button, input {
+    line-height: normal;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+[hidden], template {
+    display: none;
+}
+
+dfn {
+    font-style: italic;
+}
+
+code, kbd, pre, samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* base */
+html {
+    height: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #2b577a;
+    background-color: #edeef3;
+}
+
+a {
+    color: #4ba6e2;
+    text-decoration: underline;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fr {
+    float: right !important;
+}
+
+.fl {
+    float: left !important;
+}
+
+.hide, .hidden {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+#content{
+    background-color: #fff;
+}
+.layout {
+    width: 100%;
+}
+
+.fl {
+    float: left;
+}
+
+.rl {
+    float: right;
+}
+
+.tc {
+    text-align: center;
+}
+
+

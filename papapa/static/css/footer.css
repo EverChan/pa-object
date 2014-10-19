@@ -1,24 +1,29 @@
-/*=list=*/
-.list-bd .list-item{
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 64px;
     overflow: hidden;
-    border-bottom: 1px solid #ddd;
 }
-.list-bd dl {
+
+#footer dl {
     position: relative;
     padding: 10px 11px;
     color: #aaa;
 }
 
-.list-bd dl .new-icon {
+#footer dl .new-icon {
     left: 50px;
     top: 5px;
 }
 
-.list-bd dt img {
+#footer dt img {
     width: 44px;
 }
 
-.list-bd dd {
+#footer dd {
     margin: 0 6px;
     font-size: 12px;
     font-family: "Helvetica Neue";
@@ -26,61 +31,55 @@
     line-height: 1.2em;
 }
 
-.list-bd dd p {
+#footer dd p {
     width: 0;
     height: 30px;
     overflow: hidden;
 }
 
-.list-bd dd.pa-1 p {
+#footer dd.pa-1 p {
     width: 30px;
 }
 
-.list-bd dd.pa-2 p {
+#footer dd.pa-2 p {
     width: 60px;
 }
 
-.list-bd dd.pa-3 p {
+#footer dd.pa-3 p {
     width: 90px;
 }
 
-.list-bd .f-left {
+#footer .f-left {
     float: left;
 }
 
-.list-bd .f-left dt {
+#footer .f-left dt {
     float: left;
 }
 
-.list-bd .f-left dd {
+#footer .f-left dd {
     float: left;
 }
 
-.list-bd .f-left dd p {
+#footer .f-left dd p {
     background: url(images/icon-l-pa.png) repeat-x;
     background-size: 30px 30px;
 }
 
-.list-bd .f-right {
+#footer .f-right {
     float: right;
 }
 
-.list-bd .f-right dt {
+#footer .f-right dt {
     float: right
 }
 
-.list-bd .f-right dd {
+#footer .f-right dd {
     float: right;
     text-align: right;
 }
 
-.list-bd .f-right dd p {
+#footer .f-right dd p {
     background: url(images/icon-r-pa.png) repeat-x;
     background-size: 30px 30px;
-}
-
-.list-bd .f-right .update-time{
-    padding: 20px 5px 0 0;
-    font-size: 12px;
-    color: #aaa;
 }

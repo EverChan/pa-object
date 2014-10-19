@@ -2,20 +2,47 @@
 {% block title %}index{% endblock %}
 {% block content %}
 <div id="content">
-    <div class="layout index-wrap">
-        <!--=S index-mod=-->
-        <link rel="stylesheet" type="text/css" href="/static/css/wechatview/index-mod.css"/>
-        <div class="index-mod">
-            <div class="index-bd">
-                <div class="avt-list" id="J_avtList">
-                    {% for item in list %}
-                    <a href="#{{item.openid}}" data-openid="{{item.openid}}" class="avt-item"><img src="{{item.pic}}" alt="00"></a>
-                    {% endfor %}
-                </div>
+    <div class="layout">
+        <!--=S list-mod =-->
+        <link rel="stylesheet" type="text/css" href="/static/css/list-mod.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/list-big-mod.css"/>
+        <div class="list-mod">
+            <div class="list-bd" id="J_listItem">
+                {% for item in list %}
+                    <div class="list-item" data-openid="{{item.openid}}">
+                        <dl class="f-left">
+                            <dt class="j_cardWatch" data-uid="2">
+                                <img src="{{item.pic}}" alt="{{item.openid}}">
+                                <b class="new-icon"></b>
+                            </dt>
+                            <dd class="desc">
+                                <p class="item-name">
+                                    {{item.openid}}
+                                </p>
+                                <p>
+                                   <span class="{% if item.sex =='man' %}sex-m{% else %}sex-w{% endif %}">
+                                       <b class="num">{{item.sex}}</b>
+                                   </span>
+                                </p>
+                            </dd>
+                        </dl>
+                        <div class="f-right">
+                            <p class="update-time">
+                                   {{item.updatetime|date('Y-m-d h:m')}}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
+            <div class="list-ft"></div>
         </div>
-        <!--=E index-mod=-->
+        <!--=E list-mod =-->
     </div>
+
+
+
+
+
 </div>
 {% endblock %}
 
