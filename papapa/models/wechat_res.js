@@ -13,18 +13,23 @@ var mysql = require('../common/mysql');
 var utils = require('../lib/utils');
 
 
-//查询消息列表
-var SELECT_MessageList = multiline(function () {;/*
- SELECT * FROM wechat_res
- WHERE uid=? and isdel IS NULL
+//增加资源
+var NEW_RES = multiline(function () {;/*
+ INSERT INTO wechat_res
+ SET ?
  */});
 
-exports.getMessageList = function* (uid){
-    var _uid = parseInt(uid, 10);
-    if (!_uid) {
-        return null;
-    }
-    return yield mysql.query(SELECT_MessageList, [_uid]);
+exports.newRes = function* (data){
+    var args = {
+        openid: data.openid,
+        type: data.type,
+        path: data.path,
+        url: data.url,
+        name:data.name,
+        createtime: new Date(),
+        updatetime: new Date()
+    };
+    return yield mysql.query(NEW_RES, [args]);
 };
 
 //查询单条消息

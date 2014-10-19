@@ -6,8 +6,18 @@
 
 var debug = require('debug')('maoxu-web:controllers:test');
 
-exports.index = function* () {
-  yield* this.render('test.html', {
-    page: 'index'
-  });
-};
+var Util = require('../lib/utils');
+
+exports.index = function * (){
+    var url = this.query.url;
+    console.log(url);
+
+    if (url) {
+        var data = Util.downloadFile(url);
+    }
+
+    yield * this.render('test.html', {
+        page: 'index'
+    });
+}
+;

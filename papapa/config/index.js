@@ -1,4 +1,3 @@
-
 'use strict';
 
 /**
@@ -35,9 +34,14 @@ var config = module.exports = {
         timeout: 5000,
         multipleStatements: true
     },
-    redis:{
-        host:'localhost',
-        port:6379
+    redis: {
+        host: 'localhost',
+        port: 6379
+    },
+    downloadPath: {
+        images: path.join(path.dirname(__dirname), 'static','res','images'),
+        voice: path.join(path.dirname(__dirname), 'static','res','voice'),
+        video: path.join(path.dirname(__dirname), 'static','res','video')
     }
 
 };

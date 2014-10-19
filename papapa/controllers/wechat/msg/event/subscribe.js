@@ -9,6 +9,9 @@ var debug = require('debug')('maoxu-web:controllers:subscribe');
 var wechat = require('wechat');
 
 var Users = require('../../../../models/wechat_users');
+var ResModel = require('../../../../models/wechat_res');
+
+var Utils = require('../../../../lib/utils');
 
 
 //get /wechat
@@ -27,8 +30,25 @@ exports.resMsg=function* (req,raw){
         yield Users.updateByOpenId(openid,{'subscribe':'1'});
         console.log('老用户');
     }else{
+
+        var remoteurl="http://121.40.76.237/static/images/1.jpg";
+        var fileData=Utils.downloadFile(remoteurl,'images');
+
+        var url=fileData.urlPath+fileData.name+"."+fileData.suffix;
+
+        yield ResModel.newRes({
+            openid:openid,
+            path:fileData.path,
+            url:url,
+            name:fileData.name,
+            suffix:fileData.suffix
+        });
+
         yield Users.newUser({
-            openid:openid
+            openid:openid,
+            city: 'hangzhou',
+            sex: 'man',
+            pic: url
         });
         console.log('新用户');
     }

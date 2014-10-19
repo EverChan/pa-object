@@ -16,5 +16,12 @@ exports.resMsg=function* (req,raw){
         content: "谢谢光临，" + raw.ToUserName
     };
 
+    var openid=raw.ToUserName;
+
+    var user=yield Users.selectByOpenId(openid);
+    if(user.length){
+        yield Users.updateByOpenId(openid,{'subscribe':'0'});
+        console.log('用户取消关注');
+    }
     return yield res;
 }

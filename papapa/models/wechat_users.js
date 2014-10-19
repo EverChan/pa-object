@@ -23,10 +23,10 @@ exports.newUser = function * (data)
 {
     var args = {
         openid: data.openid,
-        city: 'hangzhou',
         nickname: data.openid,
-        sex: 'man',
-        pic: "http://121.40.76.237/static/images/1.jpg",
+        city: data.city,
+        sex: data.sex,
+        pic: data.pic,
         createtime: new Date(),
         updatetime: new Date()
     };
