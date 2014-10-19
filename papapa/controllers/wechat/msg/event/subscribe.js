@@ -52,7 +52,8 @@ exports.resMsg=function* (req,raw){
             openid:openid,
             city: 'hangzhou',
             sex: 'man',
-            pic: url
+            pic: url,
+            status:'online'
         });
         console.log('新用户');
     }

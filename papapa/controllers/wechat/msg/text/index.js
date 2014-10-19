@@ -17,6 +17,8 @@ var Users = require('../../../../models/wechat_users');
 exports.resMsg=function* (req,raw){
     var content=raw.Content;
 
+    var openid=raw.openid;
+
     var reContent="你好，" + raw.ToUserName+'。你的消息已收到：'+raw.Content;
 
     //如果是新闻关键字，回复新闻===
