@@ -29,13 +29,13 @@ exports.resMsg=function* (req,raw){
     //离线
     if(content=='pa'){
         yield Users.updateByOpenId(openid,{'status':'offline'});
-        reContent=['你已处于离线状态，上线请回复：papapa','http://121.40.76.237/wechatview/'];
+        reContent=['你已处于离线状态，上线请回复：papapa','http://121.40.76.237/wechatview/'].join('\n');
     }
 
     //在线
     if(content=='papapa'){
         yield Users.updateByOpenId(openid,{'status':'online'});
-        reContent=['你已处于在线状态，离线请回复：papapa','http://121.40.76.237/wechatview/'];
+        reContent=['你已处于在线状态，离线请回复：papapa','http://121.40.76.237/wechatview/'].join('\n');
     }
 
 
