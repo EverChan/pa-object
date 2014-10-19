@@ -64,23 +64,15 @@ var cors = require('koa-cors');
 app.use(cors());
 
 //静态资源
-app.use(middlewares.staticCache(path.join(__dirname, 'static','css'),{
-    maxAge: ms('1y'),
+app.use(middlewares.staticCache({
+    dir: 'static',
+    prefix: '/static/',
+//    maxAge: ms('1y'),
     buffer: config.debug,
     gzip: config.debug
 }));
 
-app.use(middlewares.staticCache(path.join(__dirname, 'static','images'),{
-    maxAge: ms('1y'),
-    buffer: config.debug,
-    gzip: config.debug
-}));
 
-app.use(middlewares.staticCache(path.join(__dirname, 'static','res'),{
-    maxAge:0,
-    buffer: config.debug,
-    gzip: config.debug
-}));
 
 
 if (config.debug && process.env.NODE_ENV !== 'test') {
