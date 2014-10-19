@@ -65,8 +65,8 @@ app.use(cors());
 
 //静态资源
 app.use(middlewares.staticCache({
-    dir: 'static',
-    prefix: '/static',
+    dir: 'static/css',
+    prefix: '/static/',
     maxAge: ms('1y'),
     buffer: config.debug,
     gzip: config.debug
