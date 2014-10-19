@@ -9,7 +9,7 @@
         <div class="list-mod">
             <div class="list-bd" id="J_listItem">
                 {% for item in list %}
-                    <div class="list-item" data-openid="{{item.openid}}">
+                    <div class="list-item" data-openid="{{item.openid}}" id="{{item.openid}}">
                         <dl class="f-left">
                             <dt class="j_cardWatch" data-uid="2">
                                 <a href="{{item.pic}}">
@@ -18,7 +18,7 @@
                             </dt>
                             <dd class="desc">
                                 <p class="item-name">
-                                    <input value="{{item.openid}}" readonly class="name-ipt"/>
+                                    <a href="#{{item.openid}}" class="name-ipt" onclick="alert('{{item.openid}}');">{{item.openid}}</a>
                                 </p>
                                 <p>
                                    <span class="{% if item.sex =='man' %}sex-m{% else %}sex-w{% endif %}">
