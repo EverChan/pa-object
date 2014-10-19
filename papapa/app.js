@@ -76,6 +76,12 @@ middlewares.staticCache('static/images',{
     gzip: config.debug
 });
 
+middlewares.staticCache('static/res',{
+    maxAge:0,
+    buffer: config.debug,
+    gzip: config.debug
+});
+
 
 if (config.debug && process.env.NODE_ENV !== 'test') {
     app.use(middlewares.logger());
