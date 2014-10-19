@@ -19,6 +19,10 @@ var middlewares = require('koa-middlewares');
 var parameter = require('./middlewares/parameter');
 var mount = require('koa-mount');
 
+
+var serve=require("koa-static");
+
+
 var app = koa();
 app.keys = config.keys;
 
@@ -63,15 +67,18 @@ app.use(session({
 var cors = require('koa-cors');
 app.use(cors());
 
+
+//静态资源路由
+app.use(serve('.'));
+
 //静态资源
 app.use(middlewares.staticCache({
     dir: 'static',
     prefix: '/static/',
-//    maxAge: ms('1y'),
+    maxAge: ms('1y'),
     buffer: config.debug,
     gzip: config.debug
 }));
-
 
 
 
