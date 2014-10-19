@@ -46,7 +46,8 @@ function* mockAuth(next) {
 
   this.session.user = mockUser;
 
-  this.session.openid=this.body.sp;
+  var req = this.req.body||this.request.body
+  this.session.openid=req.sp;
   yield* next;
 }
 

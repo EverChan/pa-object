@@ -19,7 +19,7 @@ exports.resMsg = function * (req, raw)
 {
 
     var openid=this.session.openid;
-    
+
     var param = req.param;
 
     var remoteUrl = param.picUrl;
