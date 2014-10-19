@@ -34,12 +34,12 @@ exports.newUser = function * (data)
 };
 
 
-//获取用户信息 by  city
+//获取在线用户信息 by city, updatetime 降序
 var SELECT_USERS_BY_CITY=multiline(function () {
     ;
     /*
      SELECT * from wechat_users
-     WHERE city=?
+     WHERE city=? and status='online' order by updatetime desc
      */
 });
 
