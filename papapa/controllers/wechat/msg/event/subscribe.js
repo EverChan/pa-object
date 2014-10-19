@@ -15,8 +15,7 @@ var Utils = require('../../../../lib/utils');
 
 
 //get /wechat
-exports.resMsg=function* (req,raw){
-    var openid=raw.ToUserName;
+exports.resMsg=function* (req,raw,openid){
 
     var msgList=["欢迎关注我们，" + openid,'帮助说明：','h --回复帮助文档','pa --设置在线','更换头像：请在对话模式下发送图片'];
 

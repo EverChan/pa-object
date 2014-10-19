@@ -15,10 +15,8 @@ var Utils = require('../../../../lib/utils');
 
 
 //get /wechat
-exports.resMsg = function * (req, raw)
+exports.resMsg = function * (req, raw,openid)
 {
-
-    var openid=this.session.openid;
 
     var param = req.param;
 

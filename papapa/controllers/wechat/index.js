@@ -23,8 +23,6 @@ exports.create = function * ()
 
 
 
-    var openid=this.session.openid;
-
 
     console.log('wechat:create');
     console.log(this.req.body);
@@ -34,6 +32,10 @@ exports.create = function * ()
     var req = this.req.body||this.request.body,//https://github.com/node-webot/weixin-robot 数据格式
         raw = req.raw,
         query = this.query;
+
+    var openid=req.sp;
+
+
     this.status = 200;
     //this.body不能覆盖，所有信息放到this.req.body中。
     // koa-wechat会将req.body数据组装成xml赋给this.body返回给服务器
@@ -47,15 +49,13 @@ exports.create = function * ()
     if(event){
         requirePath.push(event);
     }else{
-        //每次发消息，都更新下用户的updatetime
-        var openid=this.session.openid;;
 
         yield Users.updateByOpenId(openid,{'updatetime': new Date()});
     }
 
     try{
         var msgRes=require(requirePath.join("/"));
-        this.body=yield msgRes.resMsg(req,raw);
+        this.body=yield msgRes.resMsg(req,raw,openid);
     }catch (e){
         console.log(e);
         this.body = {

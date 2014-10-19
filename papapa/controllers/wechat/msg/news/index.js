@@ -10,7 +10,7 @@ var wechat = require('wechat');
 
 
 //get /wechat
-exports.resMsg=function* (req,raw){
+exports.resMsg=function* (req,raw,openid){
     var param=req.param;
 
     var newsList=[{

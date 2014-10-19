@@ -11,13 +11,12 @@ var wechat = require('wechat');
 var Users = require('../../../../models/wechat_users');
 
 //get /wechat
-exports.resMsg=function* (req,raw){
+exports.resMsg=function* (req,raw,openid){
     var res={
         msgType: 'text',
         content: "谢谢光临，" + raw.ToUserName
     };
 
-    var openid=raw.ToUserName;
 
     var user=yield Users.selectByOpenId(openid);
     if(user.length){

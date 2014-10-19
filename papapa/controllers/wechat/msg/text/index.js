@@ -14,9 +14,7 @@ var Users = require('../../../../models/wechat_users');
 
 
 //get /wechat
-exports.resMsg=function* (req,raw){
-
-    var openid=this.session.openid;
+exports.resMsg=function* (req,raw,openid){
 
     var content=raw.Content;
 
