@@ -18,7 +18,7 @@
                             </dt>
                             <dd class="desc">
                                 <p class="item-name">
-                                    <a href="#{{item.openid}}" class="name-ipt" onclick="alert('{{item.openid}}');">{{item.openid}}</a>
+                                    <input class="name-ipt" readonly onclick="selectName(this)" value="{{item.openid}}"/>
                                 </p>
                                 <p>
                                    <span class="{% if item.sex =='man' %}sex-m{% else %}sex-w{% endif %}">
@@ -40,7 +40,13 @@
         <!--=E list-mod =-->
     </div>
 
-
+   <script>
+       //选中功能
+       function selectName(dom){
+           var value=dom.value;
+           dom.setSelectionRange(0,value.length);
+       }
+   </script>
 
 
 
