@@ -39,6 +39,11 @@ exports.resMsg=function* (req,raw,openid){
         reContent=['你已处于在线状态，离线请回复：pa','http://121.40.76.237/wechatview/'];
     }
 
+    //帮助
+    if(content=='h'){
+        reContent=['帮助说明：','h --回复帮助文档','pa --设置在线','更换头像：请在对话模式下发送图片'];
+    }
+
 
     var res={
         msgType: 'text',
