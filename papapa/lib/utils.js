@@ -82,7 +82,7 @@ exports.downloadFile = function (url, type, suffix) {
     });
     var urlPath = "http://121.40.76.237/static/images/";
     return {
-        fileName: fileName,
+        name: fileName,
         type: _type,
         suffix: _suffix,
         urlPath: urlPath,
