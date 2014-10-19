@@ -17,7 +17,9 @@ var Utils = require('../../../../lib/utils');
 //get /wechat
 exports.resMsg = function * (req, raw)
 {
-    var openid = raw.ToUserName;
+
+    var openid=this.session.openid;
+    
     var param = req.param;
 
     var remoteUrl = param.picUrl;

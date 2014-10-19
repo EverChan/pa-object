@@ -45,6 +45,8 @@ function* mockAuth(next) {
     console.log('mockAuth===='+session.count,session);
 
   this.session.user = mockUser;
+
+  this.session.openid=this.body.sp;
   yield* next;
 }
 

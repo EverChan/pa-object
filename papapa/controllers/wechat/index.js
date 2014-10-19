@@ -20,6 +20,12 @@ exports.index = function * ()
 //post /wechat
 exports.create = function * ()
 {
+
+
+
+    var openid=this.session.openid;
+
+
     console.log('wechat:create');
     console.log(this.req.body);
 
@@ -42,7 +48,8 @@ exports.create = function * ()
         requirePath.push(event);
     }else{
         //每次发消息，都更新下用户的updatetime
-        var openid=raw.openid;
+        var openid=this.session.openid;;
+
         yield Users.updateByOpenId(openid,{'updatetime': new Date()});
     }
 
