@@ -55,6 +55,22 @@ exports.parsePage = function (query) {
 };
 
 /**
+ * 获取请求的ip
+ * @param req
+ * @returns {*|MockRequest.socket.remoteAddress|remoteAddress|RAISocket.remoteAddress|SMTPServerConnection.envelope.remoteAddress}
+ *
+ * x-forwarded-for: client, proxy1, proxy2, proxy3
+ */
+exports.getReqIp = function (req) {
+    var ip = req.headers['x-forwarded-for'] ||
+        req.connection.remoteAddress ||
+        req.socket.remoteAddress ||
+        req.connection.socket.remoteAddress;
+    return ip;
+};
+
+
+/**
  * 下载文件
  * @param type
  * @param url
@@ -80,7 +96,7 @@ exports.downloadFile = function (url, type, suffix) {
             console.log('File downloaded at: ' + result.file);
         }
     });
-    var urlPath = "http://121.40.76.237/resfiles/"+type+"/";
+    var urlPath = "http://121.40.76.237/resfiles/" + type + "/";
     return {
         name: fileName,
         type: _type,
