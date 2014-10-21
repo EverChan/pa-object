@@ -22,11 +22,13 @@
 }
 .list-bd dd.desc .item-name{
     display: block;
-    padding-top: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-size: 13px;
     color: #555;
-    line-height: 1.4em;
+    line-height: 1.2em;
+    max-width: 180px;
+    height: 32px;
+    overflow: hidden;
 }
 
 .list-bd dd.desc .sex-w{
