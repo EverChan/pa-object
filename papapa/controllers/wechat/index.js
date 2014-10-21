@@ -21,19 +21,15 @@ exports.index = function * ()
 exports.create = function * ()
 {
 
-
-
-
     console.log('wechat:create');
     console.log(this.req.body);
-
-
-
     var req = this.req.body||this.request.body,//https://github.com/node-webot/weixin-robot 数据格式
         raw = req.raw,
         query = this.query;
 
-    var openid=req.sp;
+    var devpId=req.sp;//sp是开发者账号 "service provider"
+    var openid=req.uid;//用户id：openid
+
 
 
     this.status = 200;
