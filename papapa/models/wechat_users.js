@@ -27,6 +27,7 @@ exports.newUser = function * (data)
         city: data.city,
         sex: data.sex,
         pic: data.pic,
+        status:data.status||'online',
         createtime: new Date(),
         updatetime: new Date()
     };
