@@ -1,14 +1,15 @@
 {% extends 'wechatbase.html' %}
-{% block title %}wechat-list{% endblock %}
+{% block title %}
+    {{ipinfo.city || ipinfo.ip}}
+{% endblock %}
 {% block content %}
 <div id="content">
-    <div class="layout" style="padding-top: 46px;">
+    <div class="layout">
         <!--=S header=-->
-        <div id="header">
-            <span class="title">
-                {{ipinfo.city || ipinfo.ip}}
-            </span>
-        </div>
+        <!--<div id="header">-->
+            <!--<span class="title">-->
+            <!--</span>-->
+        <!--</div>-->
         <!--=E header=-->
         <!--=S list-mod =-->
         <link rel="stylesheet" type="text/css" href="/static/css/list-mod.css"/>
