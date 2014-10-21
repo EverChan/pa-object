@@ -29,7 +29,8 @@
                         </dl>
                         <div class="f-right">
                             <p class="update-time">
-                                   {{item.updatetime|date('Y-M-d hh:mm')}}
+                                    <!--swig 采用的是php的date格式化规则:MySQL DATETIME 格式）-->
+                                   {{item.updatetime|date('Y-m-d H:i')}}
                             </p>
                         </div>
                     </div>
