@@ -20,7 +20,11 @@ autod:
 	@$(MAKE) install
 
 run:
-	@nohup node -harmony dispatch.js &
+	@nohup node --harmony dispatch.js &
 
 ps:
 	@ps -ef | grep node
+
+restart:
+	@pkill node
+	@$(MAKE) run

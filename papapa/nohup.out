@@ -7,3 +7,1143 @@ Error: Cannot find module '/Users/ghy/git/pa-object/papapa/—-harmony'
     at Function.Module.runMain (module.js:490:10)
     at startup (node.js:124:16)
     at node.js:803:3
+[Tue Oct 21 2014 21:22:04 GMT+0800 (CST)] [worker:16776] new worker start
+[Tue Oct 21 2014 21:22:05 GMT+0800 (CST)] [worker:16776] Server started, bridge server listen at port: 3000
+[Tue Oct 21 2014 21:22:05 GMT+0800 (CST)] [worker:16776] redis ready
+[Tue Oct 21 2014 21:22:05 GMT+0800 (CST)] [worker:16776] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:19 GMT+0800 (CST)] [worker:16781] new worker start
+[Tue Oct 21 2014 21:22:20 GMT+0800 (CST)] [worker:16781] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16781)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16781)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:20 GMT+0800 (CST)] [worker:16781] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:20 GMT+0800 (CST)] [worker:16781] worker disconnect!
+[Tue Oct 21 2014 21:22:20 GMT+0800 (CST)] [master:16780] wroker:16781 disconnect, suicide: undefined, state: online. New worker 16782 forked
+[Tue Oct 21 2014 21:22:20 GMT+0800 (CST)] [worker:16782] new worker start
+[Tue Oct 21 2014 21:22:20 GMT+0800 (CST)] [master:16780] wroker:16781 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:20 GMT+0800 (CST)] [worker:16781] redis ready
+[Tue Oct 21 2014 21:22:20 GMT+0800 (CST)] [worker:16781] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:21 GMT+0800 (CST)] [worker:16782] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16782)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16782)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:21 GMT+0800 (CST)] [worker:16782] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:21 GMT+0800 (CST)] [worker:16782] worker disconnect!
+[Tue Oct 21 2014 21:22:21 GMT+0800 (CST)] [master:16780] wroker:16782 disconnect, suicide: undefined, state: online. New worker 16783 forked
+[Tue Oct 21 2014 21:22:21 GMT+0800 (CST)] [worker:16783] new worker start
+[Tue Oct 21 2014 21:22:21 GMT+0800 (CST)] [master:16780] wroker:16782 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:21 GMT+0800 (CST)] [worker:16782] redis ready
+[Tue Oct 21 2014 21:22:21 GMT+0800 (CST)] [worker:16782] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:22 GMT+0800 (CST)] [worker:16783] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16783)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16783)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:22 GMT+0800 (CST)] [worker:16783] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:22 GMT+0800 (CST)] [worker:16783] worker disconnect!
+[Tue Oct 21 2014 21:22:22 GMT+0800 (CST)] [master:16780] wroker:16783 disconnect, suicide: undefined, state: online. New worker 16785 forked
+[Tue Oct 21 2014 21:22:22 GMT+0800 (CST)] [worker:16785] new worker start
+[Tue Oct 21 2014 21:22:22 GMT+0800 (CST)] [master:16780] wroker:16783 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:22 GMT+0800 (CST)] [worker:16783] redis ready
+[Tue Oct 21 2014 21:22:22 GMT+0800 (CST)] [worker:16783] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:23 GMT+0800 (CST)] [worker:16785] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16785)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16785)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:23 GMT+0800 (CST)] [worker:16785] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:23 GMT+0800 (CST)] [worker:16785] worker disconnect!
+[Tue Oct 21 2014 21:22:23 GMT+0800 (CST)] [master:16780] wroker:16785 disconnect, suicide: undefined, state: online. New worker 16786 forked
+[Tue Oct 21 2014 21:22:23 GMT+0800 (CST)] [worker:16786] new worker start
+[Tue Oct 21 2014 21:22:23 GMT+0800 (CST)] [master:16780] wroker:16785 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:23 GMT+0800 (CST)] [worker:16785] redis ready
+[Tue Oct 21 2014 21:22:23 GMT+0800 (CST)] [worker:16785] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:24 GMT+0800 (CST)] [worker:16786] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16786)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16786)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:24 GMT+0800 (CST)] [worker:16786] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:24 GMT+0800 (CST)] [worker:16786] worker disconnect!
+[Tue Oct 21 2014 21:22:24 GMT+0800 (CST)] [master:16780] wroker:16786 disconnect, suicide: undefined, state: online. New worker 16787 forked
+[Tue Oct 21 2014 21:22:24 GMT+0800 (CST)] [worker:16787] new worker start
+[Tue Oct 21 2014 21:22:24 GMT+0800 (CST)] [master:16780] wroker:16786 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:24 GMT+0800 (CST)] [worker:16786] redis ready
+[Tue Oct 21 2014 21:22:24 GMT+0800 (CST)] [worker:16786] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:25 GMT+0800 (CST)] [worker:16787] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16787)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16787)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:25 GMT+0800 (CST)] [worker:16787] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:25 GMT+0800 (CST)] [worker:16787] worker disconnect!
+[Tue Oct 21 2014 21:22:25 GMT+0800 (CST)] [master:16780] wroker:16787 disconnect, suicide: undefined, state: online. New worker 16788 forked
+[Tue Oct 21 2014 21:22:25 GMT+0800 (CST)] [worker:16788] new worker start
+[Tue Oct 21 2014 21:22:25 GMT+0800 (CST)] [master:16780] wroker:16787 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:25 GMT+0800 (CST)] [worker:16787] redis ready
+[Tue Oct 21 2014 21:22:25 GMT+0800 (CST)] [worker:16787] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:26 GMT+0800 (CST)] [worker:16788] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16788)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16788)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:26 GMT+0800 (CST)] [worker:16788] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:26 GMT+0800 (CST)] [worker:16788] worker disconnect!
+[Tue Oct 21 2014 21:22:26 GMT+0800 (CST)] [master:16780] wroker:16788 disconnect, suicide: undefined, state: online. New worker 16789 forked
+[Tue Oct 21 2014 21:22:26 GMT+0800 (CST)] [worker:16789] new worker start
+[Tue Oct 21 2014 21:22:26 GMT+0800 (CST)] [master:16780] wroker:16788 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:26 GMT+0800 (CST)] [worker:16788] redis ready
+[Tue Oct 21 2014 21:22:26 GMT+0800 (CST)] [worker:16788] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:27 GMT+0800 (CST)] [worker:16789] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16789)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16789)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:27 GMT+0800 (CST)] [worker:16789] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:27 GMT+0800 (CST)] [worker:16789] worker disconnect!
+[Tue Oct 21 2014 21:22:27 GMT+0800 (CST)] [master:16780] wroker:16789 disconnect, suicide: undefined, state: online. New worker 16790 forked
+[Tue Oct 21 2014 21:22:27 GMT+0800 (CST)] [worker:16790] new worker start
+[Tue Oct 21 2014 21:22:27 GMT+0800 (CST)] [master:16780] wroker:16789 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:27 GMT+0800 (CST)] [worker:16789] redis ready
+[Tue Oct 21 2014 21:22:27 GMT+0800 (CST)] [worker:16789] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:28 GMT+0800 (CST)] [worker:16790] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16790)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16790)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:28 GMT+0800 (CST)] [worker:16790] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:28 GMT+0800 (CST)] [worker:16790] worker disconnect!
+[Tue Oct 21 2014 21:22:28 GMT+0800 (CST)] [master:16780] wroker:16790 disconnect, suicide: undefined, state: online. New worker 16791 forked
+[Tue Oct 21 2014 21:22:28 GMT+0800 (CST)] [worker:16791] new worker start
+[Tue Oct 21 2014 21:22:28 GMT+0800 (CST)] [master:16780] wroker:16790 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:28 GMT+0800 (CST)] [worker:16790] redis ready
+[Tue Oct 21 2014 21:22:28 GMT+0800 (CST)] [worker:16790] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:29 GMT+0800 (CST)] [worker:16791] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16791)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16791)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:29 GMT+0800 (CST)] [worker:16791] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:29 GMT+0800 (CST)] [worker:16791] worker disconnect!
+[Tue Oct 21 2014 21:22:29 GMT+0800 (CST)] [master:16780] wroker:16791 disconnect, suicide: undefined, state: online. New worker 16792 forked
+[Tue Oct 21 2014 21:22:29 GMT+0800 (CST)] [worker:16792] new worker start
+[Tue Oct 21 2014 21:22:29 GMT+0800 (CST)] [master:16780] wroker:16791 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:29 GMT+0800 (CST)] [worker:16791] redis ready
+[Tue Oct 21 2014 21:22:29 GMT+0800 (CST)] [worker:16791] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:30 GMT+0800 (CST)] [worker:16792] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16792)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16792)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:30 GMT+0800 (CST)] [worker:16792] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:30 GMT+0800 (CST)] [worker:16792] worker disconnect!
+[Tue Oct 21 2014 21:22:30 GMT+0800 (CST)] [master:16780] wroker:16792 disconnect, suicide: undefined, state: online. New worker 16797 forked
+[Tue Oct 21 2014 21:22:30 GMT+0800 (CST)] [worker:16797] new worker start
+[Tue Oct 21 2014 21:22:30 GMT+0800 (CST)] [master:16780] wroker:16792 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:30 GMT+0800 (CST)] [worker:16792] redis ready
+[Tue Oct 21 2014 21:22:30 GMT+0800 (CST)] [worker:16792] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:31 GMT+0800 (CST)] [worker:16797] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16797)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16797)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:31 GMT+0800 (CST)] [worker:16797] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:31 GMT+0800 (CST)] [worker:16797] worker disconnect!
+[Tue Oct 21 2014 21:22:31 GMT+0800 (CST)] [master:16780] wroker:16797 disconnect, suicide: undefined, state: online. New worker 16798 forked
+[Tue Oct 21 2014 21:22:31 GMT+0800 (CST)] [worker:16798] new worker start
+[Tue Oct 21 2014 21:22:31 GMT+0800 (CST)] [master:16780] wroker:16797 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:31 GMT+0800 (CST)] [worker:16797] redis ready
+[Tue Oct 21 2014 21:22:31 GMT+0800 (CST)] [worker:16797] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:32 GMT+0800 (CST)] [worker:16798] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16798)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16798)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:32 GMT+0800 (CST)] [worker:16798] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:32 GMT+0800 (CST)] [worker:16798] worker disconnect!
+[Tue Oct 21 2014 21:22:32 GMT+0800 (CST)] [master:16780] wroker:16798 disconnect, suicide: undefined, state: online. New worker 16801 forked
+[Tue Oct 21 2014 21:22:32 GMT+0800 (CST)] [worker:16801] new worker start
+[Tue Oct 21 2014 21:22:32 GMT+0800 (CST)] [master:16780] wroker:16798 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:32 GMT+0800 (CST)] [worker:16798] redis ready
+[Tue Oct 21 2014 21:22:32 GMT+0800 (CST)] [worker:16798] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:33 GMT+0800 (CST)] [worker:16801] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16801)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16801)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:33 GMT+0800 (CST)] [worker:16801] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:33 GMT+0800 (CST)] [worker:16801] worker disconnect!
+[Tue Oct 21 2014 21:22:33 GMT+0800 (CST)] [master:16780] wroker:16801 disconnect, suicide: undefined, state: online. New worker 16806 forked
+[Tue Oct 21 2014 21:22:33 GMT+0800 (CST)] [worker:16806] new worker start
+[Tue Oct 21 2014 21:22:33 GMT+0800 (CST)] [master:16780] wroker:16801 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:33 GMT+0800 (CST)] [worker:16801] redis ready
+[Tue Oct 21 2014 21:22:33 GMT+0800 (CST)] [worker:16801] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:34 GMT+0800 (CST)] [worker:16806] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16806)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16806)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:34 GMT+0800 (CST)] [worker:16806] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:34 GMT+0800 (CST)] [worker:16806] worker disconnect!
+[Tue Oct 21 2014 21:22:34 GMT+0800 (CST)] [master:16780] wroker:16806 disconnect, suicide: undefined, state: online. New worker 16807 forked
+[Tue Oct 21 2014 21:22:34 GMT+0800 (CST)] [worker:16807] new worker start
+[Tue Oct 21 2014 21:22:34 GMT+0800 (CST)] [master:16780] wroker:16806 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:34 GMT+0800 (CST)] [worker:16806] redis ready
+[Tue Oct 21 2014 21:22:34 GMT+0800 (CST)] [worker:16806] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:35 GMT+0800 (CST)] [worker:16807] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16807)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16807)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:35 GMT+0800 (CST)] [worker:16807] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:35 GMT+0800 (CST)] [worker:16807] worker disconnect!
+[Tue Oct 21 2014 21:22:35 GMT+0800 (CST)] [master:16780] wroker:16807 disconnect, suicide: undefined, state: online. New worker 16808 forked
+[Tue Oct 21 2014 21:22:35 GMT+0800 (CST)] [worker:16808] new worker start
+[Tue Oct 21 2014 21:22:35 GMT+0800 (CST)] [master:16780] wroker:16807 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:35 GMT+0800 (CST)] [worker:16807] redis ready
+[Tue Oct 21 2014 21:22:35 GMT+0800 (CST)] [worker:16807] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:36 GMT+0800 (CST)] [worker:16808] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16808)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16808)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:36 GMT+0800 (CST)] [worker:16808] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:36 GMT+0800 (CST)] [worker:16808] worker disconnect!
+[Tue Oct 21 2014 21:22:36 GMT+0800 (CST)] [master:16780] wroker:16808 disconnect, suicide: undefined, state: online. New worker 16809 forked
+[Tue Oct 21 2014 21:22:36 GMT+0800 (CST)] [worker:16809] new worker start
+[Tue Oct 21 2014 21:22:36 GMT+0800 (CST)] [master:16780] wroker:16808 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:36 GMT+0800 (CST)] [worker:16808] redis ready
+[Tue Oct 21 2014 21:22:36 GMT+0800 (CST)] [worker:16808] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:37 GMT+0800 (CST)] [worker:16809] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16809)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16809)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:37 GMT+0800 (CST)] [worker:16809] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:37 GMT+0800 (CST)] [worker:16809] worker disconnect!
+[Tue Oct 21 2014 21:22:37 GMT+0800 (CST)] [master:16780] wroker:16809 disconnect, suicide: undefined, state: online. New worker 16810 forked
+[Tue Oct 21 2014 21:22:37 GMT+0800 (CST)] [worker:16810] new worker start
+[Tue Oct 21 2014 21:22:37 GMT+0800 (CST)] [master:16780] wroker:16809 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:37 GMT+0800 (CST)] [worker:16809] redis ready
+[Tue Oct 21 2014 21:22:37 GMT+0800 (CST)] [worker:16809] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:39 GMT+0800 (CST)] [worker:16810] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16810)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16810)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:39 GMT+0800 (CST)] [worker:16810] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:39 GMT+0800 (CST)] [worker:16810] worker disconnect!
+[Tue Oct 21 2014 21:22:39 GMT+0800 (CST)] [master:16780] wroker:16810 disconnect, suicide: undefined, state: online. New worker 16811 forked
+[Tue Oct 21 2014 21:22:39 GMT+0800 (CST)] [worker:16811] new worker start
+[Tue Oct 21 2014 21:22:39 GMT+0800 (CST)] [master:16780] wroker:16810 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:39 GMT+0800 (CST)] [worker:16810] redis ready
+[Tue Oct 21 2014 21:22:39 GMT+0800 (CST)] [worker:16810] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:40 GMT+0800 (CST)] [worker:16811] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16811)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16811)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:40 GMT+0800 (CST)] [worker:16811] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:40 GMT+0800 (CST)] [worker:16811] worker disconnect!
+[Tue Oct 21 2014 21:22:40 GMT+0800 (CST)] [master:16780] wroker:16811 disconnect, suicide: undefined, state: online. New worker 16812 forked
+[Tue Oct 21 2014 21:22:40 GMT+0800 (CST)] [worker:16812] new worker start
+[Tue Oct 21 2014 21:22:40 GMT+0800 (CST)] [master:16780] wroker:16811 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:40 GMT+0800 (CST)] [worker:16811] redis ready
+[Tue Oct 21 2014 21:22:40 GMT+0800 (CST)] [worker:16811] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:41 GMT+0800 (CST)] [worker:16812] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16812)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16812)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:41 GMT+0800 (CST)] [worker:16812] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:41 GMT+0800 (CST)] [worker:16812] worker disconnect!
+[Tue Oct 21 2014 21:22:41 GMT+0800 (CST)] [master:16780] wroker:16812 disconnect, suicide: undefined, state: online. New worker 16813 forked
+[Tue Oct 21 2014 21:22:41 GMT+0800 (CST)] [worker:16813] new worker start
+[Tue Oct 21 2014 21:22:41 GMT+0800 (CST)] [master:16780] wroker:16812 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:41 GMT+0800 (CST)] [worker:16812] redis ready
+[Tue Oct 21 2014 21:22:41 GMT+0800 (CST)] [worker:16812] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:42 GMT+0800 (CST)] [worker:16813] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16813)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16813)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:42 GMT+0800 (CST)] [worker:16813] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:42 GMT+0800 (CST)] [worker:16813] worker disconnect!
+[Tue Oct 21 2014 21:22:42 GMT+0800 (CST)] [master:16780] wroker:16813 disconnect, suicide: undefined, state: online. New worker 16815 forked
+[Tue Oct 21 2014 21:22:42 GMT+0800 (CST)] [worker:16815] new worker start
+[Tue Oct 21 2014 21:22:42 GMT+0800 (CST)] [master:16780] wroker:16813 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:42 GMT+0800 (CST)] [worker:16813] redis ready
+[Tue Oct 21 2014 21:22:42 GMT+0800 (CST)] [worker:16813] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:43 GMT+0800 (CST)] [worker:16815] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16815)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16815)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:43 GMT+0800 (CST)] [worker:16815] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:43 GMT+0800 (CST)] [worker:16815] worker disconnect!
+[Tue Oct 21 2014 21:22:43 GMT+0800 (CST)] [master:16780] wroker:16815 disconnect, suicide: undefined, state: online. New worker 16816 forked
+[Tue Oct 21 2014 21:22:43 GMT+0800 (CST)] [worker:16816] new worker start
+[Tue Oct 21 2014 21:22:43 GMT+0800 (CST)] [master:16780] wroker:16815 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:43 GMT+0800 (CST)] [worker:16815] redis ready
+[Tue Oct 21 2014 21:22:43 GMT+0800 (CST)] [worker:16815] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:45 GMT+0800 (CST)] [worker:16816] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16816)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16816)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:45 GMT+0800 (CST)] [worker:16816] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:45 GMT+0800 (CST)] [worker:16816] worker disconnect!
+[Tue Oct 21 2014 21:22:45 GMT+0800 (CST)] [master:16780] wroker:16816 disconnect, suicide: undefined, state: online. New worker 16817 forked
+[Tue Oct 21 2014 21:22:45 GMT+0800 (CST)] [worker:16817] new worker start
+[Tue Oct 21 2014 21:22:45 GMT+0800 (CST)] [master:16780] wroker:16816 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:45 GMT+0800 (CST)] [worker:16816] redis ready
+[Tue Oct 21 2014 21:22:45 GMT+0800 (CST)] [worker:16816] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:46 GMT+0800 (CST)] [worker:16817] Server started, bridge server listen at port: 3000
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16817)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+[uncaughtException] throw error 1 times
+{ [Error: bind EADDRINUSE (uncaughtException throw 1 times on pid:16817)]
+  stack: 'Error: bind EADDRINUSE\n    at exports._errnoException (util.js:745:11)\n    at cb (net.js:1191:33)\n    at rr (cluster.js:513:14)\n    at Worker.<anonymous> (cluster.js:484:9)\n    at process.<anonymous> (cluster.js:611:8)\n    at process.EventEmitter.emit (events.js:126:20)\n    at handleMessage (child_process.js:323:10)\n    at Pipe.channel.onread (child_process.js:351:11)',
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'bind' }
+Error: bind EADDRINUSE
+    at exports._errnoException (util.js:745:11)
+    at cb (net.js:1191:33)
+    at rr (cluster.js:513:14)
+    at Worker.<anonymous> (cluster.js:484:9)
+    at process.<anonymous> (cluster.js:611:8)
+    at process.EventEmitter.emit (events.js:126:20)
+    at handleMessage (child_process.js:323:10)
+    at Pipe.channel.onread (child_process.js:351:11)
+[Tue Oct 21 2014 21:22:46 GMT+0800 (CST)] [worker:16817] Error on server close!
+Error: Not running
+    at Server.close (net.js:1344:11)
+    at process.<anonymous> (/Users/ghy/git/pa-object/papapa/node_modules/graceful/lib/graceful.js:86:18)
+    at process.EventEmitter.emit (events.js:104:17)
+    at process._fatalException (node.js:237:26)
+[Tue Oct 21 2014 21:22:46 GMT+0800 (CST)] [worker:16817] worker disconnect!
+[Tue Oct 21 2014 21:22:46 GMT+0800 (CST)] [master:16780] wroker:16817 disconnect, suicide: undefined, state: online. New worker 16818 forked
+[Tue Oct 21 2014 21:22:46 GMT+0800 (CST)] [worker:16818] new worker start
+[Tue Oct 21 2014 21:22:46 GMT+0800 (CST)] [master:16780] wroker:16817 disconnect, suicide: false, state: disconnected.
+[Tue Oct 21 2014 21:22:46 GMT+0800 (CST)] [worker:16817] redis ready
+[Tue Oct 21 2014 21:22:46 GMT+0800 (CST)] [worker:16817] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:47 GMT+0800 (CST)] [worker:16818] Server started, bridge server listen at port: 3000
+[Tue Oct 21 2014 21:22:47 GMT+0800 (CST)] [worker:16818] redis ready
+[Tue Oct 21 2014 21:22:47 GMT+0800 (CST)] [worker:16818] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:22:50 GMT+0800 (CST)] [worker:16781] kill timeout, exit now.
+[Tue Oct 21 2014 21:22:50 GMT+0800 (CST)] [master:16780] wroker exit: Error: worker 16781 died (code: 1, signal: null, suicide: false, state: dead)
+    at EventEmitter.<anonymous> (/Users/ghy/git/pa-object/papapa/dispatch.js:47:15)
+    at EventEmitter.emit (events.js:115:17)
+    at ChildProcess.<anonymous> (cluster.js:294:15)
+    at ChildProcess.g (events.js:196:16)
+    at ChildProcess.EventEmitter.emit (events.js:107:17)
+    at Process.ChildProcess._handle.onexit (child_process.js:1045:12)
+[Tue Oct 21 2014 21:22:51 GMT+0800 (CST)] [worker:16782] kill timeout, exit now.
+[Tue Oct 21 2014 21:22:51 GMT+0800 (CST)] [master:16780] wroker exit: Error: worker 16782 died (code: 1, signal: null, suicide: false, state: dead)
+    at EventEmitter.<anonymous> (/Users/ghy/git/pa-object/papapa/dispatch.js:47:15)
+    at EventEmitter.emit (events.js:115:17)
+    at ChildProcess.<anonymous> (cluster.js:294:15)
+    at ChildProcess.g (events.js:196:16)
+    at ChildProcess.EventEmitter.emit (events.js:107:17)
+    at Process.ChildProcess._handle.onexit (child_process.js:1045:12)
+[Tue Oct 21 2014 21:22:52 GMT+0800 (CST)] [worker:16783] kill timeout, exit now.
+[Tue Oct 21 2014 21:22:52 GMT+0800 (CST)] [master:16780] wroker exit: Error: worker 16783 died (code: 1, signal: null, suicide: false, state: dead)
+    at EventEmitter.<anonymous> (/Users/ghy/git/pa-object/papapa/dispatch.js:47:15)
+    at EventEmitter.emit (events.js:115:17)
+    at ChildProcess.<anonymous> (cluster.js:294:15)
+    at ChildProcess.g (events.js:196:16)
+    at ChildProcess.EventEmitter.emit (events.js:107:17)
+    at Process.ChildProcess._handle.onexit (child_process.js:1045:12)
+[Tue Oct 21 2014 21:22:53 GMT+0800 (CST)] [worker:16785] kill timeout, exit now.
+[Tue Oct 21 2014 21:22:53 GMT+0800 (CST)] [master:16780] wroker exit: Error: worker 16785 died (code: 1, signal: null, suicide: false, state: dead)
+    at EventEmitter.<anonymous> (/Users/ghy/git/pa-object/papapa/dispatch.js:47:15)
+    at EventEmitter.emit (events.js:115:17)
+    at ChildProcess.<anonymous> (cluster.js:294:15)
+    at ChildProcess.g (events.js:196:16)
+    at ChildProcess.EventEmitter.emit (events.js:107:17)
+    at Process.ChildProcess._handle.onexit (child_process.js:1045:12)
+[Tue Oct 21 2014 21:22:54 GMT+0800 (CST)] [worker:16786] kill timeout, exit now.
+[Tue Oct 21 2014 21:22:54 GMT+0800 (CST)] [master:16780] wroker exit: Error: worker 16786 died (code: 1, signal: null, suicide: false, state: dead)
+    at EventEmitter.<anonymous> (/Users/ghy/git/pa-object/papapa/dispatch.js:47:15)
+    at EventEmitter.emit (events.js:115:17)
+    at ChildProcess.<anonymous> (cluster.js:294:15)
+    at ChildProcess.g (events.js:196:16)
+    at ChildProcess.EventEmitter.emit (events.js:107:17)
+    at Process.ChildProcess._handle.onexit (child_process.js:1045:12)
+[Tue Oct 21 2014 21:22:55 GMT+0800 (CST)] [worker:16787] kill timeout, exit now.
+[Tue Oct 21 2014 21:22:55 GMT+0800 (CST)] [master:16780] wroker exit: Error: worker 16787 died (code: 1, signal: null, suicide: false, state: dead)
+    at EventEmitter.<anonymous> (/Users/ghy/git/pa-object/papapa/dispatch.js:47:15)
+    at EventEmitter.emit (events.js:115:17)
+    at ChildProcess.<anonymous> (cluster.js:294:15)
+    at ChildProcess.g (events.js:196:16)
+    at ChildProcess.EventEmitter.emit (events.js:107:17)
+    at Process.ChildProcess._handle.onexit (child_process.js:1045:12)
+[Tue Oct 21 2014 21:22:56 GMT+0800 (CST)] [worker:16788] kill timeout, exit now.
+[Tue Oct 21 2014 21:22:56 GMT+0800 (CST)] [master:16780] wroker exit: Error: worker 16788 died (code: 1, signal: null, suicide: false, state: dead)
+    at EventEmitter.<anonymous> (/Users/ghy/git/pa-object/papapa/dispatch.js:47:15)
+    at EventEmitter.emit (events.js:115:17)
+    at ChildProcess.<anonymous> (cluster.js:294:15)
+    at ChildProcess.g (events.js:196:16)
+    at ChildProcess.EventEmitter.emit (events.js:107:17)
+    at Process.ChildProcess._handle.onexit (child_process.js:1045:12)
+[Tue Oct 21 2014 21:22:57 GMT+0800 (CST)] [worker:16789] kill timeout, exit now.
+[Tue Oct 21 2014 21:22:58 GMT+0800 (CST)] [worker:16790] kill timeout, exit now.
+[Tue Oct 21 2014 21:22:59 GMT+0800 (CST)] [worker:16791] kill timeout, exit now.
+[Tue Oct 21 2014 21:23:00 GMT+0800 (CST)] [worker:16792] kill timeout, exit now.
+[Tue Oct 21 2014 21:23:01 GMT+0800 (CST)] [worker:16797] kill timeout, exit now.
+[Tue Oct 21 2014 21:23:02 GMT+0800 (CST)] [worker:16798] kill timeout, exit now.
+[Tue Oct 21 2014 21:23:03 GMT+0800 (CST)] [worker:16801] kill timeout, exit now.
+[Tue Oct 21 2014 21:23:04 GMT+0800 (CST)] [worker:16806] kill timeout, exit now.
+[Tue Oct 21 2014 21:23:05 GMT+0800 (CST)] [worker:16807] kill timeout, exit now.
+[Tue Oct 21 2014 21:23:06 GMT+0800 (CST)] [worker:16808] kill timeout, exit now.
+[Tue Oct 21 2014 21:23:07 GMT+0800 (CST)] [worker:16809] kill timeout, exit now.
+[Tue Oct 21 2014 21:23:09 GMT+0800 (CST)] [worker:16810] kill timeout, exit now.
+[Tue Oct 21 2014 21:23:10 GMT+0800 (CST)] [worker:16811] kill timeout, exit now.
+[Tue Oct 21 2014 21:23:11 GMT+0800 (CST)] [worker:16812] kill timeout, exit now.
+[Tue Oct 21 2014 21:23:12 GMT+0800 (CST)] [worker:16813] kill timeout, exit now.
+[Tue Oct 21 2014 21:23:13 GMT+0800 (CST)] [worker:16815] kill timeout, exit now.
+[Tue Oct 21 2014 21:23:15 GMT+0800 (CST)] [worker:16816] kill timeout, exit now.
+[Tue Oct 21 2014 21:23:16 GMT+0800 (CST)] [worker:16817] kill timeout, exit now.
+[Tue Oct 21 2014 21:27:02 GMT+0800 (CST)] [worker:16904] new worker start
+[Tue Oct 21 2014 21:27:03 GMT+0800 (CST)] [worker:16904] Server started, bridge server listen at port: 3000
+[Tue Oct 21 2014 21:27:03 GMT+0800 (CST)] [worker:16904] redis ready
+[Tue Oct 21 2014 21:27:03 GMT+0800 (CST)] [worker:16904] mysql ready, got 9 tables
+[Tue Oct 21 2014 21:27:12 GMT+0800 (CST)] [worker:16916] new worker start
+[Tue Oct 21 2014 21:27:13 GMT+0800 (CST)] [worker:16916] Server started, bridge server listen at port: 3000
+[Tue Oct 21 2014 21:27:13 GMT+0800 (CST)] [worker:16916] redis ready
+[Tue Oct 21 2014 21:27:13 GMT+0800 (CST)] [worker:16916] mysql ready, got 9 tables
