@@ -29,6 +29,7 @@
     max-width: 180px;
     height: 32px;
     overflow: hidden;
+    word-break: break-all;
 }
 
 .list-bd dd.desc .sex-w{
