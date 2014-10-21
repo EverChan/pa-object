@@ -18,3 +18,9 @@ clean:
 autod:
 	@./node_modules/.bin/autod $(REGISTRY) -w -e coverage,views,static
 	@$(MAKE) install
+
+run:
+	@nohup node -harmony dispatch.js &
+
+ps:
+	@ps -ef | grep node
