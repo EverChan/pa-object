@@ -30,8 +30,6 @@ exports.create = function * ()
     var devpId=req.sp;//sp是开发者账号 "service provider"
     var openid=req.uid;//用户id：openid
 
-
-
     this.status = 200;
     //this.body不能覆盖，所有信息放到this.req.body中。
     // koa-wechat会将req.body数据组装成xml赋给this.body返回给服务器

@@ -33,12 +33,9 @@ exports.resMsg=function* (req,raw,openid){
             });
         console.log('老用户');
     }else{
-
         var remoteUrl="http://121.40.76.237/static/images/1.jpg";
         var fileData=Utils.downloadFile(remoteUrl,'images');
-
         var url=fileData.urlPath+fileData.name+"."+fileData.suffix;
-
         yield ResModel.newRes({
             openid:openid,
             path:fileData.path,
@@ -49,6 +46,7 @@ exports.resMsg=function* (req,raw,openid){
 
         yield Users.newUser({
             openid:openid,
+            nickname:openid,
             city: 'hangzhou',
             sex: 'man',
             pic: url,

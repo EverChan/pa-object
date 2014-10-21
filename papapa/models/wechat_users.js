@@ -23,7 +23,7 @@ exports.newUser = function * (data)
 {
     var args = {
         openid: data.openid,
-        nickname: data.openid,
+        nickname: data.nickname,
         city: data.city,
         sex: data.sex,
         pic: data.pic,
